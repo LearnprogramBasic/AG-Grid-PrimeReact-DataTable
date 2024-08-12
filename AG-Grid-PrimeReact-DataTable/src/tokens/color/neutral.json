@@ -1,0 +1,12 @@
+{
+    "color": {
+      "neutral": {
+        "grayOne": { "value": "#666666" },
+        "grayTwo": { "value": "#a4a4a4" },
+        "grayThree": { "value": "#d8d8d8" },
+        "grayFour": { "value": "#eeeeee" },
+        "grayFive": { "value": "#f6f6f6" }
+      }
+    }
+  }
+  

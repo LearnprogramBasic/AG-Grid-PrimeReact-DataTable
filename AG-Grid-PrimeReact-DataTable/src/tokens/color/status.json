@@ -1,0 +1,11 @@
+{
+    "color": {
+      "status": {
+        "success": { "value": "#619b2e" },
+        "warning": { "value": "#ffa532" },
+        "error": { "value": "#d42143" },
+        "info": { "value": "#008de6" }
+      }
+    }
+  }
+  

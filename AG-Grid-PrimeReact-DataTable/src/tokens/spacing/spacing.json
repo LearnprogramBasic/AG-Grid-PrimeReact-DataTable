@@ -1,0 +1,8 @@
+{
+    "spacing": {
+      "containerGap": { "value": "32px" },
+      "columnsGutter": { "value": "15px" },
+      "columnsGutterMd": { "value": "20px" }
+    }
+  }
+  

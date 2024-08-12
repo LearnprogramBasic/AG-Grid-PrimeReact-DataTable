@@ -1,19 +1,6 @@
 // src/components/prime-react/data.ts
 
-export interface RowData {
-    item: string;
-    descripcion: string;
-    cantidad: number;
-    valorUnitario: number;
-    descuento: string;
-    impuestos: number;
-    bodega: string;
-    vendedor: string;
-    tercero: string;
-    obsequio: boolean;
-    totalNeto: number;
-  }
-  
+import { RowData } from "../../../typings/rowData.ts";
   export const rowData: RowData[] = [
     {
       item: 'Producto genérico con un nombre mayor Producto genérico con un nombre mayor',
@@ -25,8 +12,9 @@ export interface RowData {
       bodega: 'Bodega 1',
       vendedor: 'Jhon Doe',
       tercero: 'Jane Doe',
-      obsequio: true,
+      obsequio: false,
       totalNeto: 19000,
+      id: 0
     },
     {
       item: 'Producto genérico',
@@ -38,8 +26,9 @@ export interface RowData {
       bodega: 'Bodega 1',
       vendedor: 'Jhon Doe',
       tercero: 'Jane Doe',
-      obsequio: true,
+      obsequio: false,
       totalNeto: 19000,
+      id: 1
     },
     {
       item: 'Producto A',
@@ -53,6 +42,7 @@ export interface RowData {
       tercero: 'Tercero 1',
       obsequio: false,
       totalNeto: 10000,
+      id: 2
     },
     {
       item: 'Producto A',
@@ -66,6 +56,7 @@ export interface RowData {
       tercero: 'Tercero 1',
       obsequio: false,
       totalNeto: 10000,
+      id: 3
     },
     {
       item: 'Producto A',
@@ -79,6 +70,7 @@ export interface RowData {
       tercero: 'Tercero 1',
       obsequio: false,
       totalNeto: 10000,
+      id: 4
     },
     {
       item: 'Producto A',
@@ -92,6 +84,7 @@ export interface RowData {
       tercero: 'Tercero 1',
       obsequio: false,
       totalNeto: 10000,
+      id: 5
     },
     {
       item: 'Producto A',
@@ -105,6 +98,7 @@ export interface RowData {
       tercero: 'Tercero 1',
       obsequio: false,
       totalNeto: 10000,
+      id: 6
     },
     {
       item: 'Producto A',
@@ -118,6 +112,7 @@ export interface RowData {
       tercero: 'Tercero 1',
       obsequio: false,
       totalNeto: 10000,
+      id: 7
     },
     {
       item: 'Producto A',
@@ -131,6 +126,7 @@ export interface RowData {
       tercero: 'Tercero 1',
       obsequio: false,
       totalNeto: 10000,
+      id: 8
     },
   ];
   

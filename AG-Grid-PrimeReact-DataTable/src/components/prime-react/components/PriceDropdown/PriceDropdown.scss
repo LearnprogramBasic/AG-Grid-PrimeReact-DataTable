@@ -1,0 +1,61 @@
+.custom-dropdown {
+    margin-bottom: 0.5em; /* Espacio debajo del dropdown */
+  
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+  
+    .dropdown-toggle {
+      width: 100%;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+      text-align: left;
+      border-radius: 4px;
+      color: #000; /* Asegura que el texto del botón sea negro */
+    }
+  
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1050; /* Ajuste del z-index para asegurar que el menú se muestre por encima de otros elementos */
+      display: block;
+      width: 100%;
+      padding: 0.5em 0;
+      margin: 0;
+      list-style: none;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    }
+  
+    .dropdown-item {
+      padding: 0.5em;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 0.5em; /* Espacio entre cada item */
+  
+      .dropdown-item-label {
+        flex: 1;
+      }
+  
+      .dropdown-item-value {
+        flex: 0;
+        margin-left: 15px; /* Espacio entre los dos divs */
+      }
+  
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  

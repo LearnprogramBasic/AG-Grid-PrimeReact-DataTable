@@ -1,0 +1,15 @@
+{
+    "zIndex": {
+      "zIndex0": { "value": 0 },
+      "zIndex1": { "value": 1000 },
+      "zIndex2": { "value": 1010 },
+      "zIndex3": { "value": 1020 },
+      "zIndex4": { "value": 1030 },
+      "zIndex5": { "value": 1040 },
+      "zIndex6": { "value": 1050 },
+      "zIndex7": { "value": 9999 },
+      "zIndex8": { "value": 5500 },
+      "zIndexAuto": { "value": "auto" }
+    }
+  }
+  

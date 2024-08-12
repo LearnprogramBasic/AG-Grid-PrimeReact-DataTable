@@ -1,62 +1,72 @@
+
+@import '../../styles/_variables.scss'; /* Importa tus tokens generados primero */
+@import 'primereact/resources/themes/saga-blue/theme.css'; /* Luego el tema de PrimeReact */
+
+
 .table-container {
-    padding: 1rem;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  
-    .p-datatable-wrapper {
-      scrollbar-width: thin; /* Ancho del scroll */
-      scrollbar-color: #007ad9 #fff; /* Thumb azul y track blanco */
-  
-      /* Estilos para navegadores basados en WebKit */
-      ::-webkit-scrollbar {
-        width: 12px; /* Ancho del scroll vertical */
-        height: 12px; /* Alto del scroll horizontal */
-        background: #fff; /* Fondo blanco */
-      }
-  
-      ::-webkit-scrollbar-track {
-        background: #fff; /* Fondo blanco */
-        border-radius: 10px; /* Bordes redondeados para el track */
-      }
-  
-      ::-webkit-scrollbar-thumb {
-        background: #007ad9; /* Color azul del thumb */
-        border-radius: 10px; /* Bordes redondeados para el thumb */
-        border: 3px solid #fff; /* Espacio para que las puntas se vean redondeadas */
-      }
-  
-      ::-webkit-scrollbar-thumb:hover {
-        background: #005ea0; /* Color azul más oscuro cuando se hace hover */
-      }
-  
-      ::-webkit-scrollbar-button {
-        display: none; /* Ocultar las flechas del scroll */
-      }
+  padding: $spacing-container-gap;
+  background: $color-secondary-white;
+  border: 1px solid $color-neutral-gray-three;
+  border-radius: $sizing-radius;
+
+  .p-datatable-wrapper {
+    scrollbar-width: auto;
+
+    &::-webkit-scrollbar {
+      width: $scrollbar-width; /* Usar la variable correcta */
+      height: $scrollbar-width; /* Usar la variable correcta */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $scrollbar-track-color; /* Usar la variable correcta */
+      border-radius: $scrollbar-track-border-radius; /* Usar la variable correcta */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $scrollbar-thumb-color; /* Usar la variable correcta */
+      border-radius: $scrollbar-thumb-border-radius; /* Usar la variable correcta */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $scrollbar-thumb-hover-color; /* Usar la variable correcta */
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+      background: none;
     }
   }
-  
+
   .p-datatable .p-datatable-thead > tr > th {
-    background-color: #007ad9; /* Color azul para la cabecera */
-    color: white;
+    background-color: $color-primary-blue-one;
+    color: $color-secondary-white;
     padding: 0.5rem;
     text-align: center;
+    position: relative;
+    border: none;
   }
-  
+
   .p-datatable .p-datatable-tbody > tr > td {
     padding: 0.5rem;
     vertical-align: middle;
     text-align: center;
   }
-  
+
   .p-datatable .p-datatable-tbody > tr > td .p-inputtext {
     width: 100%;
     box-sizing: border-box;
+    font-family: $typography-font-family;
+    font-size: $typography-font-size-paragraph-medium;
   }
-  
+
   .p-datatable .p-checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
+  .ellipsis {
+    font-family: $typography-font-family;
+    font-size: $typography-font-size-paragraph-medium;
+  }
+}

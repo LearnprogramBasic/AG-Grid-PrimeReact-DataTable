@@ -1,0 +1,27 @@
+{
+    "scrollbar": {
+      "width": {
+        "value": "8px"
+      },
+      "thumb": {
+        "color": {
+          "value": "#009DFF"
+        },
+        "hoverColor": {
+          "value": "#007ACC"
+        },
+        "borderRadius": {
+          "value": "4px"
+        }
+      },
+      "track": {
+        "color": {
+          "value": "#f1f1f1"
+        },
+        "borderRadius": {
+          "value": "4px"
+        }
+      }
+    }
+  }
+  

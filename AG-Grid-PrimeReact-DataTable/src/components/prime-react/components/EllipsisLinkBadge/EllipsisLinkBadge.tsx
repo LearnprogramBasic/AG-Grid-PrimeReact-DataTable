@@ -1,16 +1,16 @@
 import { FC } from 'react';
 import { Button } from 'primereact/button';
 import { Badge } from 'primereact/badge';
-import 'primereact/resources/themes/saga-blue/theme.css'; // Puedes elegir el tema que desees
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
-import './EllipsisLinkBadge.scope.scss'; // Para tus estilos personalizados
+import 'primereact/resources/themes/saga-blue/theme.css'; // Tema específico para definir colores y estilos visuales.
+import 'primereact/resources/primereact.min.css';// Estilos base de PrimeReact necesarios para todos los componentes.
+import 'primeicons/primeicons.css'; 
+import './EllipsisLinkBadge.scope.scss';
 
 interface EllipsisLinkBadgeProps {
     href: string;
     disabled: boolean;
     messageTooltipEllipsis: string;
-    statusModeBadge: 'success' | 'info' | 'warning' | 'danger'; // Ajustar las opciones permitidas
+    statusModeBadge: 'success' | 'info' | 'warning' | 'danger';
 }
 
 const EllipsisLinkBadge: FC<EllipsisLinkBadgeProps> = ({ href, disabled, messageTooltipEllipsis, statusModeBadge }) => {
@@ -24,8 +24,21 @@ const EllipsisLinkBadge: FC<EllipsisLinkBadgeProps> = ({ href, disabled, message
                 tooltip={messageTooltipEllipsis} 
                 tooltipOptions={{ position: 'top' }} 
                 onClick={() => window.location.href = href}
+                pt={{
+                    root: {
+                        className: 'custom-button', // Clase personalizada
+                    },
+                }}
             />
-            <Badge severity={statusModeBadge} className="badge-position" />
+            <Badge 
+                severity={statusModeBadge} 
+                className="badge-position"
+                pt={{
+                    root: {
+                        className: 'custom-badge', // Clase personalizada
+                    },
+                }}
+            />
         </div>
     );
 };

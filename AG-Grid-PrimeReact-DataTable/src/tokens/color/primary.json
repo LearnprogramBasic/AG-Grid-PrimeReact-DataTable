@@ -1,0 +1,12 @@
+{
+    "color": {
+      "primary": {
+        "blueOne": { "value": "#007ecc" },
+        "blueTwo": { "value": "#009dff" },
+        "blueThree": { "value": "#4dbaff" },
+        "blueFour": { "value": "#c4e8ff" },
+        "blueFive": { "value": "#ebf7ff" }
+      }
+    }
+  }
+  

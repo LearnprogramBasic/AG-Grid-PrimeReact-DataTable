@@ -1,0 +1,15 @@
+{
+    "color": {
+      "secondary": {
+        "greenOne": { "value": "#619b2e" },
+        "greenTwo": { "value": "#7ac23a" },
+        "greenThree": { "value": "#a2d675" },
+        "greenFour": { "value": "#d5ecc0" },
+        "greenFive": { "value": "#f3faee" },
+        "yellow": { "value": "#ffc933" },
+        "gray": { "value": "#37465a" },
+        "white": { "value": "#f3f7f9" }
+      }
+    }
+  }
+  

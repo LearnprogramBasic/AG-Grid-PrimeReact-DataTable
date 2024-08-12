@@ -1,0 +1,41 @@
+.header-menu-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .header-label {
+    flex-grow: 1;
+    margin-right: 10px; /* Ajusta este valor según sea necesario */
+  }
+  
+  .p-column-header-icon {
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    
+    i {
+      font-size: 1rem;
+      color: white; /* Cambia el color si es necesario */
+    }
+  
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .custom-checkbox {
+    /* Estilos adicionales para el checkbox */
+  }
+  
+  .custom-menu {
+    /* Estilos adicionales para el menú */
+  }
+  
+  .custom-button {
+    /* Estilos adicionales para el botón */
+  }
+  

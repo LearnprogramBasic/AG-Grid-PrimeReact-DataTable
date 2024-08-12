@@ -1,11 +1,10 @@
 import { useState, useEffect, FC } from 'react';
-import AgGridComponent from './components/ag-grid/AgGridComponent';
+// import AgGridComponent from './components/ag-grid/AgGridComponent';
 import PrimeReactDataTable from './components/prime-react/PrimeReactDataTable';
 import EllipsisLinkBadge from './components/prime-react/components/EllipsisLinkBadge/EllipsisLinkBadge';
 import './styles/global.scss';
 import './index.css';
-
-import ProductTable from './components/prime-react/components/ProductSelector/ProductTable';
+import AutoCompleteWithTable from './components/prime-react/components/AutoCompleteTable/AutoCompleteTable';
 
 const App: FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -29,22 +28,22 @@ const App: FC = () => {
       <button className="toggle-dark-mode" onClick={toggleDarkMode}>
         <i className="fas fa-lightbulb"></i> Toggle Dark Mode
       </button>
-      <h1>AG Grid</h1>
-      <AgGridComponent />
-      <h1>PrimeReact</h1>
+      <h1>PrimeReact-passthrough</h1>
       <PrimeReactDataTable />
       <h1>EllipsisLinkBadge</h1>
       <EllipsisLinkBadge 
-        href={'https://example.com'} 
-        disabled={false} 
+        href={'https://example.com'}         disabled={false} 
         messageTooltipEllipsis={'Click here for more options'} 
         statusModeBadge={'danger'} 
         // Debe ser uno de los valores permitidos: 'success', 'info', 'warning', 'danger'
       />
-      <h1>AutoComplete</h1>
-      <ProductTable />
+      <h1>AutoCompleteWithTable</h1>
+      <AutoCompleteWithTable value={''} onChange={function (value: string): void {
+        throw new Error('Function not implemented.');
+      } } />
     </div>
   );
 }
 
 export default App;
+
