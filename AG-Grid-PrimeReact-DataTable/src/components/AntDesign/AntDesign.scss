@@ -1,0 +1,57 @@
+@import '../../styles/_variables.scss'; // Importa tus variables SCSS
+
+.ant-table-wrapper {
+  padding: $spacing-container-gap;
+  background: $color-secondary-white;
+  border: 1px solid $color-primary-blue-one;
+  border-radius: $sizing-radius;
+
+  .ant-table-thead > tr > th {
+    background-color: $color-primary-blue-one;
+    color: $color-secondary-white;
+    text-align: center;
+    border: none; // Eliminar los bordes completamente
+    box-shadow: none; // Eliminar cualquier sombra
+    padding: 0.5rem;
+  }
+
+  .ant-table-tbody > tr > td {
+    padding: 0.5rem;
+    vertical-align: middle;
+    text-align: center;
+    border-top: 1px solid $color-neutral-gray-three; // Línea divisoria entre celdas
+  }
+
+  .ant-table-thead > tr > th.ant-table-column-has-sorters {
+    color: $color-primary-blue-two;
+  }
+
+  // Estilos para scrollbar
+  .ant-table-body {
+    scrollbar-width: auto;
+
+    &::-webkit-scrollbar {
+      width: $scrollbar-width; /* Usar la variable correcta */
+      height: $scrollbar-width; /* Usar la variable correcta */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $scrollbar-track-color; /* Usar la variable correcta */
+      border-radius: $scrollbar-track-border-radius; /* Usar la variable correcta */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $scrollbar-thumb-color; /* Usar la variable correcta */
+      border-radius: $scrollbar-thumb-border-radius; /* Usar la variable correcta */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $scrollbar-thumb-hover-color; /* Usar la variable correcta */
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+      background: none;
+    }
+  }
+}

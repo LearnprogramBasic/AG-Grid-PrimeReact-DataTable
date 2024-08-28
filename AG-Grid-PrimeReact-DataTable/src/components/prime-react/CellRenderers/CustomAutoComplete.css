@@ -1,0 +1,57 @@
+.p-autocomplete-panel {
+    width: 300px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: hidden;
+}
+
+.custom-autocomplete-panel .p-autocomplete-items-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-list-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 0.75rem;
+    background-color: #f3f7f9;
+    border-bottom: 1px solid #ccc;
+    color: #37465a;
+    font-size: 0.875rem;
+    user-select: none;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.product-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.product-list-footer {
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    z-index: 1;
+}
+
+.new-item-link {
+    color: #007ecc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.new-item-link:hover {
+    text-decoration: underline;
+}

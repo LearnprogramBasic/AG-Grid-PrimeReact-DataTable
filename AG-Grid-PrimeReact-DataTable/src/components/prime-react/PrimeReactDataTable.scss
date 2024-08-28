@@ -2,33 +2,32 @@
 @import '../../styles/_variables.scss'; /* Importa tus tokens generados primero */
 @import 'primereact/resources/themes/saga-blue/theme.css'; /* Luego el tema de PrimeReact */
 
-
 .table-container {
-  padding: $spacing-container-gap;
-  background: $color-secondary-white;
-  border: 1px solid $color-neutral-gray-three;
-  border-radius: $sizing-radius;
+  padding: $spacing-container-gap; /* Usar tu token personalizado */
+  background: $color-secondary-white; /* Usar tu token personalizado */
+  border: 1px solid $color-neutral-gray-three; /* Usar tu token personalizado */
+  border-radius: $sizing-radius; /* Usar tu token personalizado */
 
   .p-datatable-wrapper {
     scrollbar-width: auto;
 
     &::-webkit-scrollbar {
-      width: $scrollbar-width; /* Usar la variable correcta */
-      height: $scrollbar-width; /* Usar la variable correcta */
+      width: $scrollbar-width; /* Usar tu token personalizado */
+      height: $scrollbar-width; /* Usar tu token personalizado */
     }
 
     &::-webkit-scrollbar-track {
-      background: $scrollbar-track-color; /* Usar la variable correcta */
-      border-radius: $scrollbar-track-border-radius; /* Usar la variable correcta */
+      background: $scrollbar-track-color; /* Usar tu token personalizado */
+      border-radius: $scrollbar-track-border-radius; /* Usar tu token personalizado */
     }
 
     &::-webkit-scrollbar-thumb {
-      background: $scrollbar-thumb-color; /* Usar la variable correcta */
-      border-radius: $scrollbar-thumb-border-radius; /* Usar la variable correcta */
+      background: $scrollbar-thumb-color; /* Usar tu token personalizado */
+      border-radius: $scrollbar-thumb-border-radius; /* Usar tu token personalizado */
     }
 
     &::-webkit-scrollbar-thumb:hover {
-      background: $scrollbar-thumb-hover-color; /* Usar la variable correcta */
+      background: $scrollbar-thumb-hover-color; /* Usar tu token personalizado */
     }
 
     &::-webkit-scrollbar-button {
@@ -38,8 +37,8 @@
   }
 
   .p-datatable .p-datatable-thead > tr > th {
-    background-color: $color-primary-blue-one;
-    color: $color-secondary-white;
+    background-color: $color-primary-blue-one; /* Usar tu token personalizado */
+    color: $color-secondary-white; /* Usar tu token personalizado */
     padding: 0.5rem;
     text-align: center;
     position: relative;
@@ -55,8 +54,8 @@
   .p-datatable .p-datatable-tbody > tr > td .p-inputtext {
     width: 100%;
     box-sizing: border-box;
-    font-family: $typography-font-family;
-    font-size: $typography-font-size-paragraph-medium;
+    font-family: $typography-font-family; /* Usar tu token personalizado */
+    font-size: $typography-font-size-paragraph-medium; /* Usar tu token personalizado */
   }
 
   .p-datatable .p-checkbox {
@@ -66,7 +65,7 @@
   }
 
   .ellipsis {
-    font-family: $typography-font-family;
-    font-size: $typography-font-size-paragraph-medium;
+    font-family: $typography-font-family; /* Usar tu token personalizado */
+    font-size: $typography-font-size-paragraph-medium; /* Usar tu token personalizado */
   }
 }

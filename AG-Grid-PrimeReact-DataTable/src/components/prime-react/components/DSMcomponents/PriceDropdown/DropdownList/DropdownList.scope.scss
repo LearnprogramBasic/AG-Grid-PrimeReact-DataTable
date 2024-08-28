@@ -1,0 +1,46 @@
+.dropdown-list { /* Renombrado a kebab-case */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff; /* Abreviado */
+    border: 1px solid #d8d8d8; /* Abreviado */
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0 0 0 / 10%); /* Notación moderna y valor alfa corregido */
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+  
+    &::-webkit-scrollbar-button {
+      display: none;
+      background: none;
+    }
+  
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #009dff; /* Abreviado y en minúsculas */
+      border-radius: 4px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+  
+    .dropdown-header { /* Renombrado a kebab-case */
+      padding: 10px;
+      background-color: #eee; /* Abreviado */
+      border-bottom: 1px solid #d8d8d8; /* Abreviado */
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 22px;
+      text-align: left;
+      color: #37465a; /* En minúsculas */
+    }
+}

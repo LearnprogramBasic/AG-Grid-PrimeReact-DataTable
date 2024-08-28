@@ -11,15 +11,24 @@
     "build-tokens": "style-dictionary build --config ./style-dictionary.config.json"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.4.0",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
     "@fortawesome/fontawesome-free": "5",
+    "@siigo-arquitectura/button-icon-atom-react": "3.4.14",
+    "@siigo-arquitectura/checkbox-atom-react": "4.5.23",
+    "@siigo-arquitectura/autocomplete-molecule-react": "4.14.12",
+    "@siigo-arquitectura/autocomplete-molecule": "4.14.12",
     "ag-grid-community": "^32.0.2",
     "ag-grid-react": "^32.0.2",
+    "antd": "^5.20.1",
     "primeicons": "^7.0.0",
     "primereact": "^10.8.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-transition-group": "^4.4.5",
     "sass": "^1.77.8",
+    "styled-components": "^6.1.12",
     "zod": "^3.23.8",
     "zustand": "^4.5.4"
   },
@@ -32,7 +41,6 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
-    "c": "^4.0.1",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
   }

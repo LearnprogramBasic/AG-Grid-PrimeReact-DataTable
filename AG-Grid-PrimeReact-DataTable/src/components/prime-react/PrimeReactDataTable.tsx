@@ -1,100 +1,88 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import { DataTable } from "primereact/datatable";
-import { Column, ColumnBodyOptions, ColumnEditorOptions } from "primereact/column";
-import { InputText } from "primereact/inputtext";
-import { CheckboxChangeEvent } from "primereact/checkbox";
-import "./PrimeReactDataTable.scss"; // Asegúrate de importar tu SCSS aquí
+import { Button } from "primereact/button";
+import "./PrimeReactDataTable.scss";
 import { useTableStore } from "../../store/tableStore";
-import { RowData } from "../../typings/rowDataSchema";
-import { rowData as initialRowData } from "./data/data";
-import EllipsisLinkBadge from "./components/EllipsisLinkBadge/EllipsisLinkBadge";
-import HeaderMenuComponent from "./components/HeaderMenuComponent/HeaderMenuComponent";
-import LabeledCheckbox from "./components/LabeledCheckbox/LabeledCheckbox";
-import { AutoComplete } from "primereact/autocomplete";
+import { Column, ColumnBodyOptions } from "primereact/column";
+
+import CustomAutoComplete from "./CellRenderers/CustomAutoComplete.tsx";
+import { RowData } from "../../typings/rowData.ts";
 
 const PrimeReactDataTable: FC = () => {
-  const { rowData, setRowData, filteredItems, setFilteredItems } = useTableStore();
-  const [query, setQuery] = useState<string>("");
+  const { rowData, setRowData } = useTableStore();
 
-  useEffect(() => {
-    setRowData(initialRowData);
-  }, [setRowData]);
-
-  const searchItem = (event: { query: string }) => {
-    const query = event.query.toLowerCase();
-    const results = rowData.filter((item) => item.item.toLowerCase().includes(query));
-    setFilteredItems(results);
+  const addNewItem = () => {
+    const newItem: RowData = {
+      id: rowData.length + 1,
+      item: '',
+      descripcion: '',
+      cantidad: 1,
+      valorUnitario: 0,
+      descuento: '',
+      impuestos: 0,
+      bodega: '',
+      vendedor: '',
+      tercero: '',
+      obsequio: false,
+      totalNeto: 0,
+    };
+    setRowData([...rowData, newItem]);
   };
 
-  const onObsequioChange = (e: CheckboxChangeEvent, id: number) => {
-    const updatedRows = rowData.map((row) => (row.id === id ? { ...row, obsequio: e.checked ?? false } : row));
-    setRowData(updatedRows);
+  // Define la fila en blanco al final
+  const emptyRow: RowData = {
+    id: 9999, // Un id que no coincida con los demás
+    item: '+ Agregar ítem',
+    descripcion: '',
+    cantidad: 0,
+    valorUnitario: 0,
+    descuento: '',
+    impuestos: 0,
+    bodega: '',
+    vendedor: '',
+    tercero: '',
+    obsequio: false,
+    totalNeto: 0,
   };
 
-  const obsequioBodyTemplate = (rowData: RowData) => (
-    <LabeledCheckbox checked={rowData.obsequio} label="Obsequio" onChange={(e) => onObsequioChange(e, rowData.id)} />
-  );
-
-  const onEditorValueChange = <T extends keyof RowData>(props: ColumnEditorOptions, value: RowData[T]) => {
-    const updatedRows = [...rowData];
-    const field = props.field as T;
-
-    if (props.rowIndex !== undefined) {
-      updatedRows[props.rowIndex][field] = value;
-      setRowData(updatedRows);
+  const emptyRowTemplate = (data: RowData, options: ColumnBodyOptions): JSX.Element | null => {
+    if (data.id === 9999 && options.field === 'item') {
+      return (
+        <Button
+          label="+ Agregar ítem"
+          icon="pi pi-plus"
+          className="p-button-link"
+          onClick={addNewItem}
+          style={{ textAlign: 'left', color: '#007acc', backgroundColor: '#fff', border: '1px solid #ccc' }} // Estilo de fondo blanco
+        />
+      );
     }
+    return null; // Retorna null si no es la fila vacía
   };
 
-  const itemEditor = (props: ColumnEditorOptions) => (
-    <AutoComplete
-      value={query}
-      suggestions={filteredItems}
-      completeMethod={searchItem}
-      field="item"
-      onChange={(e) => {
-        setQuery(e.value);
-        onEditorValueChange(props, e.value);
-      }}
-      onSelect={(e) => {
-        onEditorValueChange(props, e.value);
-        setFilteredItems([]); // Ocultar la lista después de seleccionar
-      }}
-      dropdown={false}
-      forceSelection
-      style={{ width: '100%' }} // Asegura que el AutoComplete ocupe todo el ancho de la celda
-    />
-  );
-
-  const inputTextEditor = (props: ColumnEditorOptions, field: keyof RowData) => (
-    <InputText
-      type="text"
-      value={props.rowData[field]}
-      onChange={(e) => onEditorValueChange(props, e.target.value)}
-      className="ellipsis"
-      style={{ width: '100%' }} // Ajuste de ancho al 100% de la celda
-    />
-  );
-
-  const ellipsisTemplate = (rowData: RowData, field: keyof RowData) => (
-    <div className="ellipsis" title={String(rowData[field])}>
-      {rowData[field]}
-    </div>
-  );
-
-  const actionsBodyTemplate = () => (
-    <EllipsisLinkBadge
-      href={"https://example.com"}
-      disabled={false}
-      messageTooltipEllipsis={"Click here for more options"}
-      statusModeBadge={"success"}
-    />
-  );
+  const itemTemplate = (data: RowData, options: ColumnBodyOptions): JSX.Element | null => {
+    if (data.id === 9999) {
+      return emptyRowTemplate(data, options);
+    }
+    return (
+      <CustomAutoComplete
+      />
+    );
+  };
 
   return (
     <div className="table-container">
       <DataTable
-        value={rowData}
+        value={[...rowData, emptyRow]} // Agrega la fila en blanco al final de los datos
         reorderableRows
+        onRowReorder={(e) => {
+          const reorderedRows = e.value.filter((row: RowData) => row.id !== 9999);
+          setRowData(reorderedRows);
+        }}
+        onSort={(e) => {
+          const sortedRows = e.data.filter((row: RowData) => row.id !== 9999);
+          setRowData(sortedRows);
+        }}
         columnResizeMode="expand"
         resizableColumns
         showGridlines
@@ -103,91 +91,85 @@ const PrimeReactDataTable: FC = () => {
         tableStyle={{ minWidth: "50rem" }}
         editMode="cell"
       >
-        <Column rowReorder headerStyle={{ textAlign: "center" }} style={{ width: "3rem" }} />
+        <Column
+          rowReorder
+          headerStyle={{ textAlign: "center" }}
+          style={{ width: "3rem" }}
+          rowReorderDisabled={(rowData: RowData) => rowData.id === 9999} // Desactiva el reordenamiento de la fila fija
+        />
         <Column
           header="N°"
-          body={(_rowData, options: ColumnBodyOptions) => options.rowIndex + 1}
+          body={(_, options) => options.rowIndex + 1}
           headerStyle={{ textAlign: "center" }}
           style={{ width: "3rem" }}
         />
         <Column
           field="item"
           header="Item"
-          body={(rowData) => ellipsisTemplate(rowData, "item")}
-          editor={itemEditor}
+          body={itemTemplate} // Usa la plantilla personalizada para el item
           sortable
           style={{ maxWidth: "200px" }}
         />
         <Column
           field="descripcion"
           header="Descripción"
-          body={(rowData) => ellipsisTemplate(rowData, "descripcion")}
-          editor={(props) => inputTextEditor(props, "descripcion")}
+          body={emptyRowTemplate} // Puedes aplicar lógica similar para otras columnas
           sortable
           style={{ maxWidth: "200px" }}
         />
         <Column
           field="cantidad"
-          header={<HeaderMenuComponent label="Cantidad" menuLabel="Restringir ítems sin stock" />}
-          body={(rowData) => ellipsisTemplate(rowData, "cantidad")}
-          editor={(props) => inputTextEditor(props, "cantidad")}
+          header="Cantidad"
+          body={emptyRowTemplate} // Aplica la lógica de fila vacía donde sea necesario
           sortable
         />
         <Column
           field="valorUnitario"
           header="Valor Unitario"
-          body={(rowData) => ellipsisTemplate(rowData, "valorUnitario")}
-          editor={(props) => inputTextEditor(props, "valorUnitario")}
+          body={emptyRowTemplate}
           sortable
         />
         <Column
           field="descuento"
-          header={<HeaderMenuComponent label="Desc. (%)" menuLabel="Descuento por valor" />}
-          body={(rowData) => ellipsisTemplate(rowData, "descuento")}
-          editor={(props) => inputTextEditor(props, "descuento")}
+          header="Desc. (%)"
+          body={emptyRowTemplate}
           sortable
         />
         <Column
           field="impuestos"
           header="Impuestos y Retenciones"
-          body={(rowData) => ellipsisTemplate(rowData, "impuestos")}
-          editor={(props) => inputTextEditor(props, "impuestos")}
+          body={emptyRowTemplate}
           sortable
         />
         <Column
           field="bodega"
           header="Bodega"
-          body={(rowData) => ellipsisTemplate(rowData, "bodega")}
-          editor={(props) => inputTextEditor(props, "bodega")}
+          body={emptyRowTemplate}
           sortable
         />
         <Column
           field="vendedor"
           header="Vendedor"
-          body={(rowData) => ellipsisTemplate(rowData, "vendedor")}
-          editor={(props) => inputTextEditor(props, "vendedor")}
+          body={emptyRowTemplate}
           sortable
         />
         <Column
           field="tercero"
           header="Tercero"
-          body={(rowData) => ellipsisTemplate(rowData, "tercero")}
-          editor={(props) => inputTextEditor(props, "tercero")}
+          body={emptyRowTemplate}
           sortable
         />
         <Column
           field="obsequio"
           header="Obsequio"
-          body={obsequioBodyTemplate}
+          body={emptyRowTemplate}
         />
         <Column
           field="totalNeto"
           header="Total Neto"
-          body={(rowData) => ellipsisTemplate(rowData, "totalNeto")}
-          editor={(props) => inputTextEditor(props, "totalNeto")}
+          body={emptyRowTemplate}
           sortable
         />
-        <Column header="Actions" body={actionsBodyTemplate} style={{ width: "150px" }} />
       </DataTable>
     </div>
   );
