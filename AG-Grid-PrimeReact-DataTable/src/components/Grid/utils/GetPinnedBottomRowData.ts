@@ -1,4 +1,4 @@
-import { RowData } from '../MockData/rowData';
+import { RowData } from '@typings/typingsGrid/types';
 
 export const getPinnedBottomRowData = (rowDataLength: number): RowData[] => [
 	{
@@ -16,6 +16,7 @@ export const getPinnedBottomRowData = (rowDataLength: number): RowData[] => [
 		totalNeto: 0,
 		actions: '',
 		trash: '',
-		statusModeBadge: '', // Si es necesario para tu lógica
+		statusModeBadge: '',
+		prices: [],
 	},
 ];

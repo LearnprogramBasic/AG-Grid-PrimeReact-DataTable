@@ -1,0 +1,33 @@
+{
+	"name": "item-tax-retention-form-parcel",
+	"$schema": "https://raw.githubusercontent.com/nrwl/nx/master/packages/nx/schemas/project-schema.json",
+	"targets": {
+		"version": {
+			"executor": "@jscutlery/semver:version",
+			"options": {
+				"commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]",
+				"preset": "conventional",
+				"trackDeps": true,
+				"noVerify": true,
+				"allowEmptyRelease": true,
+				"push": true,
+				"postTargets": ["item-tax-retention-form-parcel:github"]
+			}
+		},
+		"github": {
+			"executor": "@jscutlery/semver:github",
+			"options": {
+				"tag": "${tag}",
+				"notes": "${notes}"
+			}
+		},
+		"process-results": {
+			"executor": "@siigo-arquitectura/plugin-core:process-results",
+			"options": {
+				"allowBuildOnMissing": true
+			}
+		}
+	},
+	"projectType": "application",
+	"tags": ["actor:parcel", "type:parcel", "framework:react", "has:e2e", "has:unit", "destination:cdn"]
+}

@@ -1,0 +1,50 @@
+{
+	"compilerOptions": {
+		"composite": true,
+		"target": "ES2022",
+		"useDefineForClassFields": true,
+		"lib": ["DOM", "DOM.Iterable", "ES2022"],
+		"allowJs": false,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noUncheckedIndexedAccess": true,
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"emitDeclarationOnly": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "react-jsx",
+		"baseUrl": ".",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"paths": {
+			"@/*": ["src/*"],
+			"@typings/*": ["src/typings/*"],
+			"@components/*": ["src/components/*"],
+			"@context/*": ["src/context/*"],
+			"@services/*": ["src/services/*"],
+			"@tests/*": ["tests/*"],
+			"@utils/*": ["src/utils/*"]
+		},
+		"types": ["vite/client", "react", "node"]
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.json",
+		"tests/**/*.ts",
+		"tests/**/*.spec.ts",
+		"tests/**/*.spec.tsx",
+		"postcss.config.js",
+		"vite.config.ts",
+		"vitest.config.ts",
+		"vitest.config.e2e.ts"
+	],
+	"exclude": ["dist"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}

@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { DropdownItem } from '../DropdownItem/DropdownItem';
+import { DropdownItem } from '@components/Grid/components/PriceDropdown/DropdownItem/DropdownItem';
 import './DropdownList.scope.scss';
-import { DropdownListProps } from '@/components/Grid/typings';
+import { DropdownListProps } from '@typings/typingsGrid/types';
 
 export const DropdownList: FC<DropdownListProps> = ({
 	onSelectPrice,

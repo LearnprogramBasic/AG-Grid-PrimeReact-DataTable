@@ -1,0 +1,98 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+
+// GRID SYSTEM
+$grid-columns: 12;
+$grid-gutter: 1.5rem;
+
+@use 'variables' as variables;
+
+// GRID COLUMN
+@mixin grid-column($columns) {
+	flex: 0 0 auto;
+	width: calc(math.div(100%, $grid-columns) * $columns);
+	margin: 0 $grid-gutter;
+
+	&.no-gutter {
+		margin: 0;
+	}
+}
+
+// GRID CONTAINER
+.container {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 math.div($grid-gutter, 2);
+	display: flex;
+	flex-wrap: wrap;
+
+	@each $prefix, $width in variables.$container-widths {
+		@media (min-width: map.get(variables.$breakpoints, $prefix)) {
+			max-width: $width;
+		}
+	}
+
+	&.fluid {
+		max-width: 100%;
+
+		&.no-gutter {
+			padding: 0;
+		}
+	}
+
+	&.no-gutter {
+		padding: 0;
+	}
+}
+
+// GRID ORIENTATION
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	width: 100%;
+}
+
+.column {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+}
+
+@function next-breakpoint($prefix) {
+	$keys: map.keys(variables.$breakpoints);
+	$index: list.index($keys, $prefix);
+
+	@if $index < list.length($keys) {
+		@return list.nth($keys, $index + 1);
+	}
+
+	@return null;
+}
+
+// GRID COLUMNS
+@each $prefix, $breakpoint in variables.$breakpoints {
+	@for $i from 1 through $grid-columns {
+		@if $prefix == 'xs' {
+			.col-#{$i} {
+				@include grid-column($i);
+			}
+		} @else {
+			.col-#{$prefix}-#{$i} {
+				$next-breakpoint: next-breakpoint($prefix);
+
+				@media (min-width: $breakpoint) {
+					@include grid-column($i);
+				}
+
+				@if $next-breakpoint {
+					@media (min-width: map.get(variables.$breakpoints, $prefix)) and (max-width: map.get(variables.$breakpoints, $next-breakpoint)) {
+						@include grid-column($i);
+					}
+				}
+			}
+		}
+	}
+}

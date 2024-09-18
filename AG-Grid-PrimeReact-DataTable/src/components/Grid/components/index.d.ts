@@ -1,3 +1,3 @@
 export * from './PriceDropdown/PriceDropdown';
-export * from './GetMainMenuItems/GetMainMenuItems';
+export * from './MainMenuItems/GetMainMenuItems';
 export * from './CustomTooltip/CustomTooltip';

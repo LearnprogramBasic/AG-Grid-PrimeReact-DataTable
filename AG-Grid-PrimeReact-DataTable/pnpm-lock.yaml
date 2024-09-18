@@ -8,6 +8,24 @@ importers:
 
   .:
     dependencies:
+      '@ag-grid-community/client-side-row-model':
+        specifier: ^32.0.2
+        version: 32.1.0
+      '@ag-grid-community/core':
+        specifier: ^32.0.2
+        version: 32.1.0
+      '@ag-grid-community/react':
+        specifier: ^32.0.2
+        version: 32.1.0(@ag-grid-community/core@32.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@ag-grid-community/styles':
+        specifier: ^32.0.2
+        version: 32.1.0
+      '@ag-grid-enterprise/core':
+        specifier: ^32.0.0
+        version: 32.1.0
+      '@ag-grid-enterprise/menu':
+        specifier: ^32.0.0
+        version: 32.1.0
       '@ant-design/icons':
         specifier: ^5.4.0
         version: 5.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -20,18 +38,87 @@ importers:
       '@fortawesome/fontawesome-free':
         specifier: '5'
         version: 5.15.4
+      '@fortawesome/fontawesome-svg-core':
+        specifier: ^6.6.0
+        version: 6.6.0
+      '@fortawesome/free-solid-svg-icons':
+        specifier: ^6.6.0
+        version: 6.6.0
+      '@fortawesome/react-fontawesome':
+        specifier: ^0.2.2
+        version: 0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
+      '@siigo-arquitectura/ag-grid-theme':
+        specifier: 0.5.10
+        version: 0.5.10
       '@siigo-arquitectura/autocomplete-molecule':
-        specifier: 4.14.12
-        version: 4.14.12
+        specifier: 4.14.1
+        version: 4.14.1
       '@siigo-arquitectura/autocomplete-molecule-react':
-        specifier: 4.14.12
-        version: 4.14.12(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 4.14.1
+        version: 4.14.1(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/button-atom':
+        specifier: ^3.1.92
+        version: 3.2.15
+      '@siigo-arquitectura/button-atom-react':
+        specifier: ^3.1.91
+        version: 3.2.14(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/button-dropdown-atom':
+        specifier: 4.5.12
+        version: 4.5.12
+      '@siigo-arquitectura/button-dropdown-atom-react':
+        specifier: 4.5.12
+        version: 4.5.12(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@siigo-arquitectura/button-icon-atom-react':
         specifier: 3.4.14
         version: 3.4.14(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@siigo-arquitectura/checkbox-atom-react':
         specifier: 4.5.23
         version: 4.5.23(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/datepicker-molecule':
+        specifier: 5.10.3
+        version: 5.10.3
+      '@siigo-arquitectura/datepicker-molecule-react':
+        specifier: 5.10.3
+        version: 5.10.3(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/dropdown-content-atom':
+        specifier: 10.6.18
+        version: 10.6.18
+      '@siigo-arquitectura/dropdown-content-atom-react':
+        specifier: 10.6.18
+        version: 10.6.18(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/file-uploader-molecule':
+        specifier: 0.6.2
+        version: 0.6.2
+      '@siigo-arquitectura/file-uploader-molecule-react':
+        specifier: 0.6.2
+        version: 0.6.2(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/input-atom-react':
+        specifier: 7.8.30
+        version: 7.8.30(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/management-button-icon-molecule-react':
+        specifier: 2.3.1
+        version: 2.3.1(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/notification-growl-atom-react':
+        specifier: 3.5.0
+        version: 3.5.0(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/notifications-inline-molecule':
+        specifier: 4.1.76
+        version: 4.1.76
+      '@siigo-arquitectura/notifications-inline-molecule-react':
+        specifier: 4.1.76
+        version: 4.1.76(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/super-modal-molecule':
+        specifier: 1.2.76
+        version: 1.2.76
+      '@siigo-arquitectura/super-modal-molecule-react':
+        specifier: 1.2.76
+        version: 1.2.76(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@siigo-arquitectura/text-area-atom':
+        specifier: 6.1.0
+        version: 6.1.0
+      '@siigo-arquitectura/text-area-atom-react':
+        specifier: 6.1.0
+        version: 6.1.0(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       ag-grid-community:
         specifier: ^32.0.2
         version: 32.1.0
@@ -101,6 +188,40 @@ importers:
         version: 5.4.0(sass@1.77.8)
 
 packages:
+
+  '@ag-grid-community/client-side-row-model@32.1.0':
+    resolution: {integrity: sha512-R/IA3chA/w9fy6/EeZhi42PTwVnb6bNjGMah1GWGvuNDTvfbPO4X9r4nhOMj6YH483bO+C7pPb4EoLECx0dfRQ==}
+
+  '@ag-grid-community/core@32.1.0':
+    resolution: {integrity: sha512-fHpgSZa/aBjg2DdOzooDxILFZqxmxP8vsjRfeZVtqby19mTKwNAclE7Z6rWzOA0GYjgN9s8JwLFcNA5pvfswMg==}
+
+  '@ag-grid-community/react@32.1.0':
+    resolution: {integrity: sha512-ObaMk+g5IpfuiHSNar56IhJ0dLKkHaeMQYI9H1JlJyf5+3IafY1DiuGZ5mZTU7GyfNBgmMuRWrUxwOyt0tp7Lw==}
+    peerDependencies:
+      '@ag-grid-community/core': 32.1.0
+      react: ^16.3.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
+
+  '@ag-grid-community/styles@31.3.4':
+    resolution: {integrity: sha512-5pgt/Qq/GxiJi59UA17ltG5U4r0J+GB3S/QCysJFi6kmgmCDsbCfisekTwSh0xxOGO+OIhejoqsOuEnTcw78kg==}
+
+  '@ag-grid-community/styles@32.1.0':
+    resolution: {integrity: sha512-OjakLetS/zr0g5mJWpnjldk/RjGnl7Rv3I/5cGuvtgdmSgS+4FNZMr8ZmyR8Bl34s0RM63OSIphpVaFGlnJM4w==}
+
+  '@ag-grid-enterprise/column-tool-panel@32.1.0':
+    resolution: {integrity: sha512-OFgNKryVPV18HZtMRME5BfMvgP+4QbN/oqV8V+1tUU0DyZdAEwrr9HlZorpC5vOKnnzB7MEF7KmTl7rTOfM+hA==}
+
+  '@ag-grid-enterprise/core@32.1.0':
+    resolution: {integrity: sha512-zUujEzdCOloJiMMZTzLM22N+P1m2h+Fa/5vNdHjXMehkJaUIZrLv63Wl0zt2pjtu1E8XbXKdEeczPQv3xkUu0A==}
+
+  '@ag-grid-enterprise/menu@32.1.0':
+    resolution: {integrity: sha512-w2u1ch8crNa+AhoWsYqwpr3TBD6h2bvUYAGamxBavZWm1j1MKA7KwcdW1hJ3dgWO8MES4qf/+nq2EHuy9/HO2A==}
+
+  '@ag-grid-enterprise/row-grouping@32.1.0':
+    resolution: {integrity: sha512-ij6C2FRf+sTwBRnn23yoTzI4IsCgdT9F6BTMc47F9uH7Zc9F8Qaidy2bUjBFTMcUODpfDhjZObkfCVuLhK/6Kw==}
+
+  '@ag-grid-enterprise/side-bar@32.1.0':
+    resolution: {integrity: sha512-bJgPCbW0BXAFjAGKwPDj5aDQpZSBS7IMCJ4AltCI0Ng4CyUx7mRWK6ShM58Y9lfDk9JskLOlahKu05bx6iNPoQ==}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -469,9 +590,27 @@ packages:
   '@floating-ui/utils@0.2.7':
     resolution: {integrity: sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==}
 
+  '@fortawesome/fontawesome-common-types@6.6.0':
+    resolution: {integrity: sha512-xyX0X9mc0kyz9plIyryrRbl7ngsA9jz77mCZJsUkLl+ZKs0KWObgaEBoSgQiYWAsSmjz/yjl0F++Got0Mdp4Rw==}
+    engines: {node: '>=6'}
+
   '@fortawesome/fontawesome-free@5.15.4':
     resolution: {integrity: sha512-eYm8vijH/hpzr/6/1CJ/V/Eb1xQFW2nnUKArb3z+yUWv7HTwj6M7SP957oMjfZjAHU6qpoNc2wQvIxBLWYa/Jg==}
     engines: {node: '>=6'}
+
+  '@fortawesome/fontawesome-svg-core@6.6.0':
+    resolution: {integrity: sha512-KHwPkCk6oRT4HADE7smhfsKudt9N/9lm6EJ5BVg0tD1yPA5hht837fB87F8pn15D8JfTqQOjhKTktwmLMiD7Kg==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-solid-svg-icons@6.6.0':
+    resolution: {integrity: sha512-IYv/2skhEDFc2WGUcqvFJkeK39Q+HyPf5GHUrT/l2pKbtgEIv1al1TKd6qStR5OIwQdN1GZP54ci3y4mroJWjA==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/react-fontawesome@0.2.2':
+    resolution: {integrity: sha512-EnkrprPNqI6SXJl//m29hpaNzOp1bruISWaOiRtkMi/xSvHJlzc2j2JAYS7egxt/EbjSNV/k6Xy0AQI6vB2+1g==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      react: '>=16.3'
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -651,15 +790,53 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@siigo-arquitectura/autocomplete-molecule-react@4.14.12':
-    resolution: {integrity: sha512-hE4UNKE1vspwImPBnhwpifl23SWxx9yHYTqni4HmJlpP5B8y8ZvlF26J0OR2HN0oRNw1dQyQkj0y1e3ol/M8Rg==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/autocomplete-molecule-react/4.14.12/6cbe918850cc73c2ba66a5f79c50fbc9f7ce7551}
+  '@siigo-arquitectura/ag-grid-theme@0.5.10':
+    resolution: {integrity: sha512-6rOW+2r8JTzju85847CS9sKtdgHKc32N4EDK+bopX9DkbxAH5c+X6Ev7TXSdkzSBy6qfuLSL77jWuRrFEPfR6Q==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/ag-grid-theme/0.5.10/cefbccc6dd35e00015f62b41bc63c1a7d29ab752}
+
+  '@siigo-arquitectura/autocomplete-molecule-react@4.14.1':
+    resolution: {integrity: sha512-+NP4i4TfGm4J44eVTGnjpLJ2aunBy+SqxazC047NzjZA8DaVfUPCoYayOmHJNVuqUYz6d3X9zJykmtIX6EYMMw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/autocomplete-molecule-react/4.14.1/d52ec6444401178d164b0254134af3fc88f46cc6}
     peerDependencies:
       '@stencil/core': '>=4.1.0 <5.0.0'
       react: ^18
       react-dom: ^18
 
-  '@siigo-arquitectura/autocomplete-molecule@4.14.12':
-    resolution: {integrity: sha512-gqpPfjCpcMQGaiNcVH24cg1hNphCLnRVBpoNY85Cy0yPuVF2hvNFJrN7W5pBL86JZEKVC0p17iJzmccpxnI4Gw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/autocomplete-molecule/4.14.12/375c4826512fa96f4f46e2985462bdd76e994b91}
+  '@siigo-arquitectura/autocomplete-molecule@4.14.1':
+    resolution: {integrity: sha512-VJuDJyDP9130CwLI9APXfuXpqSJRe0niDJHoubsD6rFrnoTNv9Q24Y9MHktp+kZ7j6wqUEdCeNXbjaqjgZURMQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/autocomplete-molecule/4.14.1/656018d943fb11fb3f214ba0c09872e5de22a0e1}
+
+  '@siigo-arquitectura/badge-atom@4.2.96':
+    resolution: {integrity: sha512-Iqw+LxDTFxKuT15U4UID8+uvqvMholg+8mGy/lxnmKp8MvR3vl98bTWQxuQ0NuJLd3ol5JRi8nYZUSjLD2NBug==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/badge-atom/4.2.96/eaa950a2f524d76cfa89d08dd500b9155d94e551}
+
+  '@siigo-arquitectura/button-atom-react@3.2.14':
+    resolution: {integrity: sha512-MpuVSpTA3k6ELpEFHdPIbHVFQlJ80SwlCw+IDMFw7eZ5pwqPlh12rDQ3rORNA8coXhc/Ig4BeeUgXKOn0eqTwQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-atom-react/3.2.14/e3796ecc541b859c1799504d56878c4e7f5fc47b}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/button-atom@3.1.76':
+    resolution: {integrity: sha512-4ZFUG/H1kwzZKYGywDbzXdjQB5bV0MXvyEk7ooh5XSDyQbx6FiEo5WeYZ6fXmd6/86mXibddqdna2v/k8SQGWg==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-atom/3.1.76/a464b0ccb8495994e74ecf9e36eee3465dd91e17}
+
+  '@siigo-arquitectura/button-atom@3.2.14':
+    resolution: {integrity: sha512-NuNCgFgHywTKuSUcKuS9BHdR3Ic3vqE3Z2Ma0gL0u43Q/i8FoZqXy64Ih3HgeUUXmCMO5V92vDutWpOYqjSOVQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-atom/3.2.14/9a8213f24f308bbc4560ca7d15cd70febb5ad9c3}
+
+  '@siigo-arquitectura/button-atom@3.2.15':
+    resolution: {integrity: sha512-eO4/S8DdB1jSCl8ZVB8dvQXSU3pBEb55gtqoYKDwlTPQGhbQlF427BE/a1e3RURlpajdFOI/83DlnoiH30v5wQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-atom/3.2.15/9161b6103741b9b77a0bbbb44107d4fb2d314605}
+
+  '@siigo-arquitectura/button-box-molecule@1.2.18':
+    resolution: {integrity: sha512-E99H/WF9/UffbylVy5TWQEcxEusSbkOGQz6l0bJ/MlOPmSpnpCyKH6/KAbIc1La9zLXn4vk1JFlOLQa5agdjaQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-box-molecule/1.2.18/7ebf7da987135ea9fc22186db11c0ca1375892da}
+
+  '@siigo-arquitectura/button-dropdown-atom-react@4.5.12':
+    resolution: {integrity: sha512-RbE68yXQCnlq+n8aOWeSGNlsS3x0oGYs9bbzEESL0UAjs4N73ujkO9Ks8MrfKQ5lygRcxlMzP65JptdVnlDiYg==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-dropdown-atom-react/4.5.12/8f7d2d6f286cbbe5dae73dddf12fd6ffb6f76f00}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/button-dropdown-atom@4.4.18':
+    resolution: {integrity: sha512-ch9coZFEgpAfIlGrxrS3U5KXKYCp9gzvnIQTTnhEhOnzuZtrmaBy6vjv2c2s8hAgmqTmCA5GNCEV268EgAgtGQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-dropdown-atom/4.4.18/a2d46114fcf5555e4366fec92e1be395976368b8}
+
+  '@siigo-arquitectura/button-dropdown-atom@4.5.12':
+    resolution: {integrity: sha512-rDezScvL73gyoiwlj3ZcgSdISWlB/PqXE0jixKxHAG2QwPR1AFVxQTO9yYme9lb0Oo2kWOWZao8v5fuiOgbRVQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-dropdown-atom/4.5.12/8781b5b1b98859cb3ce4f05b739b14e891bcfb69}
 
   '@siigo-arquitectura/button-icon-atom-react@3.4.14':
     resolution: {integrity: sha512-fZdDoYpKZ8pCHJF/qx14uKtwwp4veoNfMJR6CbXuj46aNXWvK0/TDL/kYUl9MAud1JyT4EHnDEqyrhnUqeb/0A==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-icon-atom-react/3.4.14/427eb58720cb3bc59062674c6ab3ac3faf6f1378}
@@ -667,6 +844,9 @@ packages:
       '@stencil/core': '>=4.1.0 <5.0.0'
       react: ^18
       react-dom: ^18
+
+  '@siigo-arquitectura/button-icon-atom@3.3.76':
+    resolution: {integrity: sha512-KLML3xFmP3+sX+V/y4cnp8I3MPhYWCXznwvPlSi+KtYnn31qmhGJUgK3raK5QmeJ43gr34hQ4AQCuVZ0N9J39A==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-icon-atom/3.3.76/63f969418dd5fdf3f939161bdc7e132b62957b08}
 
   '@siigo-arquitectura/button-icon-atom@3.4.14':
     resolution: {integrity: sha512-R9uJ2FVKu8/gS5mzmiC2RAn6fxpSSr7B9AH2c+libf46NKXtwJN1sM7X4oz3WbqeHCl6Fg2Yf4PQvGhgZrjGiw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/button-icon-atom/3.4.14/38914aae2771edabf41e7536de4105ef749f55c9}
@@ -687,14 +867,119 @@ packages:
   '@siigo-arquitectura/checkbox-atom@4.5.24':
     resolution: {integrity: sha512-cHvX/3i2IMZrcmQfeLUDp3VQbkog460D1t5cijrNMyssTiRCi9wLQtpz4fFCHZMiRaMe7ZrCmSAfOefJArzcFA==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/checkbox-atom/4.5.24/30338c77fec5c99dea49ec88b15963ee07b46f66}
 
+  '@siigo-arquitectura/checkbox-atom@4.5.4':
+    resolution: {integrity: sha512-fVrRzgp6Vu/HzJ5bxp2zUQWMQM/WXvcV+c96yCAOlOgpA/fT9x9pXcO67WTZOHzUhcAml7aTgE862plXtNaALA==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/checkbox-atom/4.5.4/15fb577afd72c241a0df8248c135b4a12643d59f}
+
   '@siigo-arquitectura/chip-atom@4.2.50':
     resolution: {integrity: sha512-6k4dtcJdmmdt2pkl3Ij8oegpxk61ozu3DPEi4SvTQAVwth9lxjvbIVbMwmmihTpTOwNB+oT6pfzTviEv/pg99w==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/chip-atom/4.2.50/3e8b9e46151d6783ffb605221ca4a32f2efedd3b}
 
-  '@siigo-arquitectura/dropdown-content-atom@10.7.16':
-    resolution: {integrity: sha512-cW6vBtRVG7z5qZtI4RcV243zUtY25F+q9/WjfwCwuLuCZ3d9QfJt47940Q1r8tAslYrX4Mq/eHt6y7lh+YmPNQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/dropdown-content-atom/10.7.16/68b49a55f12d2a124f63763409e143bd29725f6d}
+  '@siigo-arquitectura/datepicker-molecule-react@5.10.3':
+    resolution: {integrity: sha512-sA1ht9n0mwIV/Ftk0KLYssmvU77QeyNeycBcNcGDCmTbFIVCUZuuEqWnFJkViFpb0Gvkuf+F+Bp9ub7hLQyiew==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/datepicker-molecule-react/5.10.3/5ad5238c5638f31b31258dc5ec19213ec21eb707}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/datepicker-molecule@5.10.3':
+    resolution: {integrity: sha512-fCfwMjjuvG7sE6Cb7afYTvGyOi07GbWWbGVJ7ULZvyIuE15OXvUCXnpptYgynvEs2E3z3c9Ih/HheLsCmhVzQw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/datepicker-molecule/5.10.3/863a7791d3086ce8beb51d722225573a6d519f51}
+
+  '@siigo-arquitectura/design-tokens@0.7.1':
+    resolution: {integrity: sha512-MnF7ze2eZsE3Ae26bfHuD7B+7+qSQerSx9+NLYKmCHIZSL1bJ+mV1ZbSZjPUoEUJoPYjNCaWMVo/v/4KUYck2w==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/design-tokens/0.7.1/c69ff97f8b16715b0a4db9e09fa10d469989ab44}
+
+  '@siigo-arquitectura/dialog-modal-molecule@0.4.0':
+    resolution: {integrity: sha512-nFZBWqP9kvj4ZGPjZK4Nkm2hh40bIx9bBQ5TS8QSOH4B5HGt4ggPm6WEBf2EoKXjg85uto1bs34pWx8hbGSsSQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/dialog-modal-molecule/0.4.0/24a70935b222ec49026bd1eec6f9fc7b9556dcc3}
+
+  '@siigo-arquitectura/dropdown-content-atom-react@10.6.18':
+    resolution: {integrity: sha512-WNPMAsC6SEI5vNlebtoiNpo/UPXYeLR/puINcL901tCm4s8cDy0IEpujFx0/nWAOdUW2xyLAPer5tAqRo1kkig==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/dropdown-content-atom-react/10.6.18/75820a449b7c29bec9b2e67c41a412e1fe87b6e2}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/dropdown-content-atom@10.6.18':
+    resolution: {integrity: sha512-H6t/dkIQcyVVsbVM9uxA0Sv3Rp94VgywxCIAlBl8rpdk0p+8xM3wVpkumSa08gXxRMrpSvU5dLnlwi+rAl9Jeg==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/dropdown-content-atom/10.6.18/ab16003e651a181d44dbda364f80438820560311}
+
+  '@siigo-arquitectura/dropdown-content-atom@10.7.5':
+    resolution: {integrity: sha512-NNBS83cDyfuKlJpi1whVkpFFwSxB3W27DAsh/G8vY5MB2UG/E/vRu0ksfz3VchOmP0nBtUAD0pX4V5KNRmimew==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/dropdown-content-atom/10.7.5/b81e878c3ab936ac30cb0ee1b3aa30d34eea7ce5}
+
+  '@siigo-arquitectura/favorite-atom@4.2.18':
+    resolution: {integrity: sha512-niivMO9izdaAYEJKAetv2C+XNtagIVcx02dW6WtSm1+Uf2N69USOgylxaMhMPl34F5XjPP+1zlKYws3Hml1umQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/favorite-atom/4.2.18/82dcdedf7bc1baed48d0c349aa5447897fdd60f7}
+
+  '@siigo-arquitectura/file-uploader-molecule-react@0.6.2':
+    resolution: {integrity: sha512-+Wq/QO4e3JDMnKK/W2MK64LzC/t6jfMPHoLfwt9gZJ8YdzpznqRGi1zwXsPopuTV5X2Sz9Ag1IV4IR4Y4+YYpw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/file-uploader-molecule-react/0.6.2/73fabe12e21597d47a0b0bf00ccf4fab36c0a856}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/file-uploader-molecule@0.6.2':
+    resolution: {integrity: sha512-YWdbMaNkiMTO7dF8CzamK/dOHLB/z+Nk1OGSiKHjuov4WqtHaFrDY/9BhuS+1BOxLAVTMz/U6f4QwFhkk8dcyw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/file-uploader-molecule/0.6.2/f28e3b82973dbe8d6d908d3d012f12b97d6d9d88}
+
+  '@siigo-arquitectura/input-atom-react@7.8.30':
+    resolution: {integrity: sha512-qVzht78oI0OO9B0UqdVtKKdgU+A9o5DZcG9lKbKVpqgympBAkxVTR4UBKtGZzML1AOC3YuzkkfdGloq1WvNoKw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/input-atom-react/7.8.30/33bd3877b3a78d59305a8e4dc3d260dcb66f94db}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/input-atom@7.8.30':
+    resolution: {integrity: sha512-V23BYqjDe5+E2H1kfeWnZZQ+S/OXA4B/qr61n79ru6M43PVzoLOQG4qMWtPTSoyC8tEZZ1Rmr2J7PbY6gB4idg==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/input-atom/7.8.30/c5325a76bb6f232b6ac113dc9274d32d8ac66829}
 
   '@siigo-arquitectura/input-atom@7.8.38':
     resolution: {integrity: sha512-j7jWcdiwjNtyVIGlnSja58xrbRLnJUNALJYE+Nq8L0C0htWe/0qcGbw8oE/klyLO+B4cFR4yhAMnqjqmVZC9Kg==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/input-atom/7.8.38/9ff283bd6d361b63f327e65851358989f2967336}
+
+  '@siigo-arquitectura/management-button-icon-molecule-react@2.3.1':
+    resolution: {integrity: sha512-JiQRCFRG+E7NDUlTvo8DU+HnQUylOvguySeh3BqHgPn8TEwUXap9tg1CCaSq9bn/drehFVGMITdF+pr/xp19Cw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/management-button-icon-molecule-react/2.3.1/205939d57ee20299524ce670d65212c909ef5d20}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/management-button-icon-molecule@2.3.1':
+    resolution: {integrity: sha512-Yae8MDnKREp8MXx42XzpzmyfQrHBqP51slzJdJkflnv5ZstNc0W1rR8/NFBIXj/2QJhjizolrlVszm83mpWhyg==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/management-button-icon-molecule/2.3.1/ffc3f81b6e50586c57e841a782c3c7808889d808}
+
+  '@siigo-arquitectura/notification-growl-atom-react@3.5.0':
+    resolution: {integrity: sha512-D/NhjYoXahUKj0fOz+uSGoJN10A36Hvqb7F74v+JKk38yD4gYEgJ7NX+rQPLe+670rXVrs7D6L0LgUFhOCwKeQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/notification-growl-atom-react/3.5.0/24c767b7d6a606cd594619506668c6077b1f2463}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/notification-growl-atom@3.5.0':
+    resolution: {integrity: sha512-ZQ8EKH71tc3V0yG3VxJ2mWnCQyMcFm+wOaFjajMapxe3ny3uxnSMrzurYRPQzgUgOZSy7UWbDNCkFKaLzM+heA==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/notification-growl-atom/3.5.0/e06761b27fc8e15d324927b663605d08942890cd}
+
+  '@siigo-arquitectura/notifications-inline-molecule-react@4.1.76':
+    resolution: {integrity: sha512-Qttai1clCLx0yBx1BdW+gemo4aVxxJ3BB/BRcKuRhZEYdNiROXMYpXs3bSdOEDM8DTag2a0AVxA5SkEVyqBbQQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/notifications-inline-molecule-react/4.1.76/d1a133c045bf53935ef2c032b696f780109b8340}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/notifications-inline-molecule@4.1.76':
+    resolution: {integrity: sha512-5iGQCIGGxldtkljBVGOYGc70x31Bt1aAkemPYZ8Sxo1V6d96LRbDB6WW3Ndm9tneT4OjPWhqchAxuxLFcV6YLQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/notifications-inline-molecule/4.1.76/c06fbad8aa3a441e0d2958f32dbdc4b90ff839b8}
+
+  '@siigo-arquitectura/super-modal-molecule-react@1.2.76':
+    resolution: {integrity: sha512-PYzque7kXqcrELbl5C9yOWPLjAGok5QCWCvVrt/fb7cjL7nQR3Zq0HGIRPc0eYleH0X+95llJh/Klv5D3rsz+Q==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/super-modal-molecule-react/1.2.76/19354a24a32413d2fa978e27017a8d34b52467d9}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/super-modal-molecule@1.2.76':
+    resolution: {integrity: sha512-eKarKYFcuqJX8cxghTHuQDL8Y+x1KN/trwAedX4ppSA/2oSmC6ftec/dm5UUAVsJQKSXb8m5uCm1RdFefdM4MQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/super-modal-molecule/1.2.76/91702574532c3e4521838840d34e03d250b1f08b}
+
+  '@siigo-arquitectura/text-area-atom-react@6.1.0':
+    resolution: {integrity: sha512-VnNtKhE0qzRaIm0RPLWjqdkkFEi75Jlu+BJDa8zuO6lz0eLDsItVGx+2glELycxrgMk2kqCWwY/tH2Sf74giVQ==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/text-area-atom-react/6.1.0/ed295dc4206d8daae4df83bf0179da7c2ee5211a}
+    peerDependencies:
+      '@stencil/core': '>=4.1.0 <5.0.0'
+      react: ^18
+      react-dom: ^18
+
+  '@siigo-arquitectura/text-area-atom@6.1.0':
+    resolution: {integrity: sha512-lFDNM6hBzeOlZwrwIqYRsPlhbQ/Aj8TP7zvlEvlaRfj+SpI3pruHsUXClxpk+fj6OLy2MoPqj7UwMwMb4ppChw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/text-area-atom/6.1.0/75b599348265c724f3d243dc4e66d8151fa0da2b}
+
+  '@siigo-arquitectura/tooltip-atom@4.5.15':
+    resolution: {integrity: sha512-NzdKZXBPoQ7O0CN/MtpthGBmvUOrqGOVysKWnkJ5VTg2AQuGYiQqgtHyoHYvoAS31Xy3TOERi07AFTFhpxm9Nw==, tarball: https://npm.pkg.github.com/download/@siigo-arquitectura/tooltip-atom/4.5.15/a2e0291b0f165bed478beced1afdac7a6e3a60ed}
 
   '@stencil/core@4.20.0':
     resolution: {integrity: sha512-WPrTHFngvN081RY+dJPneKQLwnOFD60OMCOQGmmSHfCW0f4ujPMzzhwWU1gcSwXPWXz5O+8cBiiCaxAbJU7kAg==}
@@ -1664,6 +1949,10 @@ packages:
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
+  rxjs@6.6.7:
+    resolution: {integrity: sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==}
+    engines: {npm: '>=2.0.0'}
+
   sass@1.77.8:
     resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
     engines: {node: '>=14.0.0'}
@@ -1766,6 +2055,9 @@ packages:
     engines: {node: '>=16'}
     peerDependencies:
       typescript: '>=4.2.0'
+
+  tslib@1.14.1:
+    resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
 
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
@@ -1870,6 +2162,54 @@ packages:
         optional: true
 
 snapshots:
+
+  '@ag-grid-community/client-side-row-model@32.1.0':
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+      tslib: 2.6.2
+
+  '@ag-grid-community/core@32.1.0':
+    dependencies:
+      ag-charts-types: 10.1.0
+      tslib: 2.6.2
+
+  '@ag-grid-community/react@32.1.0(@ag-grid-community/core@32.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@ag-grid-community/styles@31.3.4': {}
+
+  '@ag-grid-community/styles@32.1.0': {}
+
+  '@ag-grid-enterprise/column-tool-panel@32.1.0':
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+      '@ag-grid-enterprise/core': 32.1.0
+      '@ag-grid-enterprise/row-grouping': 32.1.0
+      '@ag-grid-enterprise/side-bar': 32.1.0
+
+  '@ag-grid-enterprise/core@32.1.0':
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+
+  '@ag-grid-enterprise/menu@32.1.0':
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+      '@ag-grid-enterprise/column-tool-panel': 32.1.0
+      '@ag-grid-enterprise/core': 32.1.0
+
+  '@ag-grid-enterprise/row-grouping@32.1.0':
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+      '@ag-grid-enterprise/core': 32.1.0
+
+  '@ag-grid-enterprise/side-bar@32.1.0':
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+      '@ag-grid-enterprise/core': 32.1.0
 
   '@ampproject/remapping@2.3.0':
     dependencies:
@@ -2253,7 +2593,23 @@ snapshots:
 
   '@floating-ui/utils@0.2.7': {}
 
+  '@fortawesome/fontawesome-common-types@6.6.0': {}
+
   '@fortawesome/fontawesome-free@5.15.4': {}
+
+  '@fortawesome/fontawesome-svg-core@6.6.0':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+
+  '@fortawesome/free-solid-svg-icons@6.6.0':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+
+  '@fortawesome/react-fontawesome@0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)':
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.6.0
+      prop-types: 15.8.1
+      react: 18.3.1
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -2413,20 +2769,76 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.20.0':
     optional: true
 
-  '@siigo-arquitectura/autocomplete-molecule-react@4.14.12(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@siigo-arquitectura/ag-grid-theme@0.5.10':
     dependencies:
-      '@siigo-arquitectura/autocomplete-molecule': 4.14.12
+      '@ag-grid-community/styles': 31.3.4
+      '@siigo-arquitectura/design-tokens': 0.7.1
+
+  '@siigo-arquitectura/autocomplete-molecule-react@4.14.1(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/autocomplete-molecule': 4.14.1
       '@stencil/core': 4.20.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@siigo-arquitectura/autocomplete-molecule@4.14.12':
+  '@siigo-arquitectura/autocomplete-molecule@4.14.1':
     dependencies:
       '@floating-ui/dom': 1.6.10
       '@siigo-arquitectura/button-icon-atom': 3.4.15
       '@siigo-arquitectura/chip-atom': 4.2.50
-      '@siigo-arquitectura/dropdown-content-atom': 10.7.16
+      '@siigo-arquitectura/dropdown-content-atom': 10.7.5
       '@siigo-arquitectura/input-atom': 7.8.38
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/badge-atom@4.2.96':
+    dependencies:
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/button-atom-react@3.2.14(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/button-atom': 3.2.14
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/button-atom@3.1.76':
+    dependencies:
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/button-atom@3.2.14':
+    dependencies:
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/button-atom@3.2.15':
+    dependencies:
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/button-box-molecule@1.2.18':
+    dependencies:
+      '@siigo-arquitectura/button-atom': 3.1.76
+      '@siigo-arquitectura/button-dropdown-atom': 4.4.18
+      '@siigo-arquitectura/dropdown-content-atom': 10.6.18
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/button-dropdown-atom-react@4.5.12(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/button-dropdown-atom': 4.5.12
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/button-dropdown-atom@4.4.18':
+    dependencies:
+      '@floating-ui/dom': 1.6.10
+      '@siigo-arquitectura/checkbox-atom': 4.5.4
+      '@siigo-arquitectura/dropdown-content-atom': 10.6.18
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/button-dropdown-atom@4.5.12':
+    dependencies:
+      '@floating-ui/dom': 1.6.10
+      '@siigo-arquitectura/checkbox-atom': 4.5.24
+      '@siigo-arquitectura/dropdown-content-atom': 10.7.5
       '@stencil/core': 4.20.0
 
   '@siigo-arquitectura/button-icon-atom-react@3.4.14(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
@@ -2435,6 +2847,10 @@ snapshots:
       '@stencil/core': 4.20.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/button-icon-atom@3.3.76':
+    dependencies:
+      '@stencil/core': 4.20.0
 
   '@siigo-arquitectura/button-icon-atom@3.4.14':
     dependencies:
@@ -2459,18 +2875,156 @@ snapshots:
     dependencies:
       '@stencil/core': 4.20.0
 
+  '@siigo-arquitectura/checkbox-atom@4.5.4':
+    dependencies:
+      '@stencil/core': 4.20.0
+
   '@siigo-arquitectura/chip-atom@4.2.50':
     dependencies:
       '@siigo-arquitectura/button-icon-atom': 3.4.15
       '@stencil/core': 4.20.0
 
-  '@siigo-arquitectura/dropdown-content-atom@10.7.16':
+  '@siigo-arquitectura/datepicker-molecule-react@5.10.3(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/datepicker-molecule': 5.10.3
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/datepicker-molecule@5.10.3':
+    dependencies:
+      '@floating-ui/dom': 1.6.10
+      '@siigo-arquitectura/button-atom': 3.2.15
+      '@siigo-arquitectura/button-icon-atom': 3.4.15
+      '@siigo-arquitectura/input-atom': 7.8.38
+      '@siigo-arquitectura/tooltip-atom': 4.5.15
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/design-tokens@0.7.1': {}
+
+  '@siigo-arquitectura/dialog-modal-molecule@0.4.0':
+    dependencies:
+      '@siigo-arquitectura/button-atom': 3.2.15
+      '@siigo-arquitectura/button-icon-atom': 3.4.15
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/dropdown-content-atom-react@10.6.18(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/dropdown-content-atom': 10.6.18
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/dropdown-content-atom@10.6.18':
+    dependencies:
+      '@siigo-arquitectura/checkbox-atom': 4.5.4
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/dropdown-content-atom@10.7.5':
     dependencies:
       '@siigo-arquitectura/checkbox-atom': 4.5.24
       '@stencil/core': 4.20.0
 
+  '@siigo-arquitectura/favorite-atom@4.2.18':
+    dependencies:
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/file-uploader-molecule-react@0.6.2(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/file-uploader-molecule': 0.6.2
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/file-uploader-molecule@0.6.2':
+    dependencies:
+      '@siigo-arquitectura/button-atom': 3.2.15
+      '@siigo-arquitectura/button-icon-atom': 3.4.15
+      '@siigo-arquitectura/dialog-modal-molecule': 0.4.0
+      '@stencil/core': 4.20.0
+      rxjs: 6.6.7
+
+  '@siigo-arquitectura/input-atom-react@7.8.30(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/input-atom': 7.8.30
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/input-atom@7.8.30':
+    dependencies:
+      '@stencil/core': 4.20.0
+
   '@siigo-arquitectura/input-atom@7.8.38':
     dependencies:
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/management-button-icon-molecule-react@2.3.1(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/management-button-icon-molecule': 2.3.1
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/management-button-icon-molecule@2.3.1':
+    dependencies:
+      '@siigo-arquitectura/badge-atom': 4.2.96
+      '@siigo-arquitectura/tooltip-atom': 4.5.15
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/notification-growl-atom-react@3.5.0(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/notification-growl-atom': 3.5.0
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/notification-growl-atom@3.5.0':
+    dependencies:
+      '@siigo-arquitectura/button-icon-atom': 3.4.15
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/notifications-inline-molecule-react@4.1.76(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/notifications-inline-molecule': 4.1.76
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/notifications-inline-molecule@4.1.76':
+    dependencies:
+      '@siigo-arquitectura/button-icon-atom': 3.3.76
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/super-modal-molecule-react@1.2.76(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/super-modal-molecule': 1.2.76
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/super-modal-molecule@1.2.76':
+    dependencies:
+      '@siigo-arquitectura/button-box-molecule': 1.2.18
+      '@siigo-arquitectura/button-icon-atom': 3.3.76
+      '@siigo-arquitectura/dropdown-content-atom': 10.6.18
+      '@siigo-arquitectura/favorite-atom': 4.2.18
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/text-area-atom-react@6.1.0(@stencil/core@4.20.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@siigo-arquitectura/text-area-atom': 6.1.0
+      '@stencil/core': 4.20.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@siigo-arquitectura/text-area-atom@6.1.0':
+    dependencies:
+      '@stencil/core': 4.20.0
+
+  '@siigo-arquitectura/tooltip-atom@4.5.15':
+    dependencies:
+      '@siigo-arquitectura/button-icon-atom': 3.4.15
       '@stencil/core': 4.20.0
 
   '@stencil/core@4.20.0': {}
@@ -3645,6 +4199,10 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
+  rxjs@6.6.7:
+    dependencies:
+      tslib: 1.14.1
+
   sass@1.77.8:
     dependencies:
       chokidar: 3.6.0
@@ -3728,6 +4286,8 @@ snapshots:
   ts-api-utils@1.3.0(typescript@5.5.4):
     dependencies:
       typescript: 5.5.4
+
+  tslib@1.14.1: {}
 
   tslib@2.6.2: {}
 

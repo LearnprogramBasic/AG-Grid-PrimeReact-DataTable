@@ -1,0 +1,396 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:meta';
+@use 'variables' as variables;
+
+// COLOR CLASSES
+
+@each $name, $color in variables.$scheme-colors {
+	.bg-#{$name} {
+		background-color: $color;
+	}
+
+	.text-#{$name} {
+		color: $color;
+	}
+
+	.border-#{$name} {
+		border-color: $color;
+	}
+}
+
+@function is-map($map) {
+	@return meta.type-of($map) == map;
+}
+
+@each $name in variables.$color-names {
+	$content: map.get(variables.$colors, $name);
+
+	@if is-map($content) {
+		@each $suffix in variables.$color-suffixes {
+			.bg-#{$name}-#{$suffix} {
+				background-color: map.get($content, $suffix);
+			}
+
+			.text-#{$name}-#{$suffix} {
+				color: map.get($content, $suffix);
+			}
+
+			.border-#{$name}-#{$suffix} {
+				border-color: map.get($content, $suffix);
+			}
+		}
+	} @else {
+		.bg-#{$name} {
+			background-color: $content;
+		}
+
+		.text-#{$name} {
+			color: $content;
+		}
+
+		.border-#{$name} {
+			border-color: $content;
+		}
+	}
+}
+
+// TYPOGRAPHY
+
+@each $name in variables.$font-weights {
+	.font-#{$name} {
+		font-weight: map.get(variables.$weights, $name);
+	}
+}
+
+@each $tag, $size in variables.$element-sizes {
+	@if is-map($size) {
+		@each $class-name, $value in $size {
+			#{$tag}.#{$class-name} {
+				font-size: $value;
+			}
+		}
+	} @else {
+		#{$tag} {
+			font-size: $size;
+		}
+	}
+}
+
+@each $class-name, $sizes in variables.$class-sizes {
+	@each $prefix, $size in $sizes {
+		.#{$class-name}-#{$prefix} {
+			font-size: $size;
+		}
+	}
+}
+
+// FLEXBOX
+.flex {
+	display: flex;
+
+	&-row {
+		flex-direction: row;
+	}
+
+	&-column {
+		flex-direction: column;
+	}
+
+	&-wrap {
+		flex-wrap: wrap;
+	}
+
+	&-nowrap {
+		flex-wrap: nowrap;
+	}
+
+	&-wrap-reverse {
+		flex-wrap: wrap-reverse;
+	}
+
+	&-justify-start {
+		justify-content: flex-start;
+	}
+
+	&-justify-end {
+		justify-content: flex-end;
+	}
+
+	&-justify-center {
+		justify-content: center;
+	}
+
+	&-justify-between {
+		justify-content: space-between;
+	}
+
+	&-justify-around {
+		justify-content: space-around;
+	}
+
+	&-justify-evenly {
+		justify-content: space-evenly;
+	}
+
+	&-align-start {
+		align-items: flex-start;
+	}
+
+	&-align-end {
+		align-items: flex-end;
+	}
+
+	&-align-center {
+		align-items: center;
+	}
+
+	&-align-baseline {
+		align-items: baseline;
+	}
+
+	&-align-stretch {
+		align-items: stretch;
+	}
+
+	&-align-content-start {
+		align-content: flex-start;
+	}
+
+	&-align-content-end {
+		align-content: flex-end;
+	}
+
+	&-align-content-center {
+		align-content: center;
+	}
+
+	&-align-content-between {
+		align-content: space-between;
+	}
+
+	&-align-content-around {
+		align-content: space-around;
+	}
+
+	&-align-content-stretch {
+		align-content: stretch;
+	}
+
+	&-self-start {
+		align-self: flex-start;
+	}
+
+	&-self-end {
+		align-self: flex-end;
+	}
+
+	&-self-center {
+		align-self: center;
+	}
+
+	&-self-baseline {
+		align-self: baseline;
+	}
+
+	&-self-stretch {
+		align-self: stretch;
+	}
+
+	&-grow-0 {
+		flex-grow: 0;
+	}
+
+	&-grow-1 {
+		flex-grow: 1;
+	}
+
+	&-shrink-0 {
+		flex-shrink: 0;
+	}
+
+	&-shrink-1 {
+		flex-shrink: 1;
+	}
+
+	@each $order in 0, 1, 2, 3, 4, 5 {
+		&-order-#{$order} {
+			order: $order;
+		}
+	}
+
+	&-order-first {
+		order: -1;
+	}
+
+	&-order-last {
+		order: 6;
+	}
+
+	&-order-none {
+		order: 0;
+	}
+}
+
+// SPACING
+
+@function get-direction-property($direction, $property) {
+	$x-properties: 'left', 'right';
+	$y-properties: 'top', 'bottom';
+	$properties: (
+		'blank': null,
+		'e': 'right',
+		's': 'left',
+		't': 'top',
+		'r': 'right',
+		'b': 'bottom',
+		'l': 'left',
+		'x': $x-properties,
+		'y': $y-properties,
+	);
+	$suffix: map.get($properties, $direction);
+
+	@if $suffix {
+		@if meta.type-of($suffix) == list {
+			$final: ();
+
+			@each $item in $suffix {
+				$final: list.append($final, '#{$property}-#{$item}');
+			}
+
+			@return $final;
+		} @else {
+			@if $suffix {
+				@return '#{$property}-#{$suffix}';
+			}
+
+			@return '#{$property}';
+		}
+	}
+
+	@return $property;
+}
+
+@function get-class-template($prefix, $direction, $breakpoint, $level) {
+	$has-direction: $direction != 'blank';
+	$has-breakpoint: $breakpoint != 'xs';
+
+	@if $has-direction and $has-breakpoint {
+		@return '#{$prefix}#{$direction}-#{$breakpoint}-#{$level}';
+	}
+
+	@if $has-direction {
+		@return '#{$prefix}#{$direction}-#{$level}';
+	}
+
+	@if $has-breakpoint {
+		@return '#{$prefix}-#{$breakpoint}-#{$level}';
+	}
+
+	@return '#{$prefix}-#{$level}';
+}
+
+@function next-breakpoint($prefix) {
+	$keys: map.keys(variables.$breakpoints);
+	$index: list.index($keys, $prefix);
+
+	@if $index < list.length($keys) {
+		@return list.nth($keys, $index + 1);
+	}
+
+	@return null;
+}
+
+@each $breakpoint, $br-value in variables.$breakpoints {
+	@each $level, $multiplier in variables.$space-levels {
+		@each $property, $prefix in variables.$spacers {
+			$has-directions: $prefix != 'gap' and $prefix != 'row-gap' and $prefix != 'column-gap';
+
+			@if $has-directions {
+				@each $direction in variables.$directions {
+					$spacing-value: $multiplier * variables.$base-spacing;
+					$class-template: get-class-template($prefix, $direction, $breakpoint, $level);
+					$property-final: get-direction-property($direction, $property);
+					$has-multiple-properties: meta.type-of($property-final) == list;
+
+					.#{$class-template} {
+						$next-breakpoint: next-breakpoint($breakpoint);
+
+						@if $has-multiple-properties {
+							@if $next-breakpoint and $breakpoint != 'xs' {
+								@media (min-width: map.get(variables.$breakpoints, $breakpoint)) and (max-width: map.get(variables.$breakpoints, $next-breakpoint)) {
+									@each $item in $property-final {
+										#{$item}: $spacing-value !important;
+									}
+								}
+							} @else {
+								@media (min-width: map.get(variables.$breakpoints, $breakpoint)) {
+									@each $item in $property-final {
+										#{$item}: $spacing-value !important;
+									}
+								}
+							}
+						} @else {
+							@if $next-breakpoint and $breakpoint != 'xs' {
+								@media (min-width: map.get(variables.$breakpoints, $breakpoint)) and (max-width: map.get(variables.$breakpoints, $next-breakpoint)) {
+									#{$property-final}: $spacing-value !important;
+								}
+							} @else {
+								@media (min-width: map.get(variables.$breakpoints, $breakpoint)) {
+									#{$property-final}: $spacing-value !important;
+								}
+							}
+						}
+					}
+				}
+			} @else {
+				$spacing-value: $multiplier * variables.$base-spacing;
+				$class-template: get-class-template($prefix, 'blank', $breakpoint, $level);
+
+				.#{$class-template} {
+					$next-breakpoint: next-breakpoint($breakpoint);
+
+					@if $next-breakpoint {
+						@media (min-width: map.get(variables.$breakpoints, $breakpoint)) and (max-width: map.get(variables.$breakpoints, $next-breakpoint)) {
+							#{$property}: $spacing-value !important;
+						}
+					} @else {
+						@media (min-width: map.get(variables.$breakpoints, $breakpoint)) {
+							#{$property}: $spacing-value !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Text Size Utilities
+
+@each $element, $content in variables.$element-sizes {
+	@if is-map($content) {
+		@each $class-name, $value in $content {
+			#{$element}.#{$class-name} {
+				font-size: $value;
+			}
+		}
+	} @else {
+		#{$element} {
+			font-size: $content;
+		}
+	}
+}
+
+@each $class, $content in variables.$class-sizes {
+	@if is-map($content) {
+		@each $class-name, $value in $content {
+			.#{$class}-#{$class-name} {
+				font-size: $value;
+			}
+		}
+	} @else {
+		.#{$class} {
+			font-size: $content;
+		}
+	}
+}

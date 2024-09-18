@@ -1,0 +1,24 @@
+.product-description-wrapper {
+	border: 1px solid #e6e6e6;
+	border-radius: 8px;
+	padding: 15px 25px;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 4px rgba(0 0 0 / 10%);
+}
+
+.product-description-content {
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	color: #333;
+}
+
+.divider {
+	margin: 0 10px;
+	width: 1px;
+	height: 20px;
+	background-color: #ccc;
+}

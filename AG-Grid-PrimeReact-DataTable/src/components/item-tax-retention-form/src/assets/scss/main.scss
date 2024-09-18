@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use 'variables' as variables;
+@use 'reset';
+@use 'fonts';
+@use 'grid';
+@use 'content';
+
+* {
+	font-family: variables.$family-font !important;
+}
+
+:root {
+	font-family: variables.$family-font;
+	color-scheme: light dark;
+}
+
+html,
+body {
+	font-family: variables.$family-font;
+	background-color: map.get(variables.$scheme-colors, 'secondary');
+	color: map.get(variables.$colors, 'dark-blue', 'two');
+	height: 100%;
+	width: 100%;
+
+	a {
+		cursor: pointer;
+		text-decoration: none;
+		color: map.get(variables.$colors, 'blue', 'two');
+		font-weight: bold;
+	}
+}

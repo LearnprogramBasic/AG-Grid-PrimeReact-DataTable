@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { PriceDropdown } from '../../components/PriceDropdown/PriceDropdown';
+import { PriceDropdown } from '@components/Grid/components/PriceDropdown/PriceDropdown';
 import { CustomCellEditorProps } from '@ag-grid-community/react';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -1,0 +1,144 @@
+@use 'sass:map';
+
+$size-prefixes: 'xs', 'sm', 'md', 'lg', 'xl', 'xxl';
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
+$container-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1320px,
+);
+$colors: (
+	'blue': (
+		one: #007ecc,
+		two: #009dff,
+		three: #4dbaff,
+		four: #c4e8ff,
+		five: #ebf7ff,
+	),
+	'dark-blue': (
+		one: #222b45,
+		two: #37465a,
+		three: #4d5d7a,
+		four: #6b7a9a,
+		five: #8a9bb8,
+	),
+	'green': (
+		one: #619b2e,
+		two: #7ac23a,
+		three: #a2d675,
+		four: #d5ecc0,
+		five: #f3faee,
+	),
+	'grey': (
+		one: #666,
+		two: #a4a4a4,
+		three: #d8d8d8,
+		four: #eee,
+		five: #f6f6f6,
+	),
+	'red': (
+		one: #d42143,
+		two: #e74c3c,
+		three: #f17c67,
+		four: #f7a998,
+		five: #fbd0c9,
+	),
+	'yellow': (
+		one: #ffc933,
+		two: #ffd966,
+		three: #ffe699,
+		four: #fff2cc,
+		five: #fffbe6,
+	),
+	'white': #fff,
+	'black': #000,
+	'transparent': transparent,
+);
+$weights: (
+	'extra-light': 200,
+	'light': 300,
+	'normal': 400,
+	'medium': 500,
+	'semi-bold': 600,
+	'bold': 700,
+	'extra-bold': 800,
+	'dark': 900,
+);
+$font-weights: map.keys($weights);
+$color-names: map.keys($colors);
+$color-suffixes: 'one', 'two', 'three', 'four', 'five';
+$scheme-colors: (
+	primary: map.get($colors, 'blue', 'one'),
+	alternative-primary: map.get($colors, 'green', 'two'),
+	secondary: #f3f7f9,
+	success: map.get($colors, 'green', 'one'),
+	warning: map.get($colors, 'yellow', 'one'),
+	error: map.get($colors, 'red', 'one'),
+	info: map.get($colors, 'blue', 'two'),
+	success-light: map.get($colors, 'green', 'five'),
+	warning-light: map.get($colors, 'yellow', 'five'),
+	error-light: map.get($colors, 'red', 'five'),
+	info-light: map.get($colors, 'blue', 'five'),
+);
+$scheme-prefixes: map.keys($scheme-colors);
+$element-sizes: (
+	'h1': 2.25rem,
+	'h2': 2rem,
+	'h3': 1.75rem,
+	'h4': 1.5rem,
+	'h5': 1.25rem,
+	'h6': 1.125rem,
+	'p': (
+		'large': 1.125rem,
+		'medium': 1rem,
+		'small': 0.875rem,
+		'hero': 4rem,
+	),
+	'caption': 0.75rem,
+	'a': (
+		'xl': 1.125rem,
+		'lg': 1rem,
+		'md': 0.875rem,
+		'sm': 0.75rem,
+	),
+);
+$class-sizes: (
+	'text': (
+		'hero': 4rem,
+		'xxl': 2.25rem,
+		'xl': 1.125rem,
+		'lg': 1rem,
+		'md': 0.875rem,
+		'sm': 0.75rem,
+	),
+);
+$family-font: 'NunitoSans', sans-serif;
+$base-spacing: 1rem;
+$directions: 'y', 'x', 't', 'r', 'b', 'l', 's', 'e', 'blank';
+$space-levels: (
+	'0': 0,
+	'1': 0.25,
+	'2': 0.5,
+	'3': 0.75,
+	'4': 1,
+	'5': 1.25,
+	'6': 1.5,
+	'7': 1.75,
+	'8': 2,
+);
+$spacers: (
+	'margin': 'm',
+	'padding': 'p',
+	'gap': 'gap',
+	'row-gap': 'row-gap',
+	'column-gap': 'column-gap',
+);

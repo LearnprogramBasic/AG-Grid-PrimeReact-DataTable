@@ -1,0 +1,83 @@
+{
+	"name": "@siigo-siigonube/item-tax-retention-form-parcel",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"engineStrict": true,
+	"engines": {
+		"node": ">= 18.0.0",
+		"npm": ">= 9.0.0",
+		"pnpm": ">= 8.6.0"
+	},
+	"scripts": {
+		"build": "tsc && vite build",
+		"build:watch": "vite build --watch",
+		"preview": "vite preview",
+		"dev": "vite",
+		"start:spa": "concurrently -k -n build,serve -c \"auto\" \"pnpm build:watch\" \"pnpm preview\"",
+		"install:e2e:deps": "playwright install-deps",
+		"test:unit": "vitest run --config vitest.config.ts",
+		"test:e2e": "vitest run --config vitest.config.e2e.ts",
+		"test:unit:watch": "vitest dev --config vitest.config.ts",
+		"test:e2e:watch": "vitest dev --config vitest.config.e2e.ts",
+		"test:coverage": "vitest run --coverage --config vitest.config.ts",
+		"lint:types": "tsc --incremental",
+		"lint:code": "eslint . --cache --cache-strategy content",
+		"lint:fix": "pnpm lint:code --fix",
+		"lint:styles": "stylelint \"src/**/*.{css,scss}\" --cache --cache-strategy content",
+		"lint": "concurrently -n types,code,styles -c \"auto\" \"pnpm lint:types\" \"pnpm lint:code\" \"pnpm lint:styles\""
+	},
+	"keywords": [
+		"react",
+		"single-spa",
+		"micro-frontend",
+		"parcel",
+		"vite"
+	],
+	"license": "USO EXCLUSIVO SIIGO S.A",
+	"dependencies": {
+		"@siigo-arquitectura/button-atom-react": "^3.1.80",
+		"@siigo-arquitectura/button-box-molecule-react": "1.2.68",
+		"@siigo-arquitectura/side-panel-molecule-react": "2.1.3",
+		"@uidotdev/usehooks": "^2.4.1",
+		"i18next": "^23.11.3",
+		"i18next-browser-languagedetector": "^7.2.1",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-i18next": "^14.1.1",
+		"single-spa-react": "^6.0.1",
+		"zustand": "^4.5.2"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.43.1",
+		"@testing-library/jest-dom": "^6.4.2",
+		"@testing-library/react": "^14.3.1",
+		"@types/node": "^20.12.8",
+		"@types/react": "^18.3.1",
+		"@types/react-dom": "^18.3.0",
+		"@vitejs/plugin-react": "^4.2.1",
+		"@vitest/browser": "^1.5.3",
+		"@vitest/coverage-istanbul": "^1.5.3",
+		"@vitest/coverage-v8": "^1.5.3",
+		"@vitest/ui": "^1.5.3",
+		"add": "^2.0.6",
+		"autoprefixer": "^10.4.19",
+		"concurrently": "^8.2.2",
+		"cssnano": "^6.1.2",
+		"jsdom": "^24.0.0",
+		"postcss": "^8.4.38",
+		"postcss-preset-env": "^9.5.9",
+		"prettier": "^3.2.5",
+		"rollup-plugin-react-scoped-css": "^0.8.4",
+		"sass": "^1.76.0",
+		"stylelint": "^16.5.0",
+		"stylelint-config-standard-scss": "^13.1.0",
+		"typescript": "^5.4.5",
+		"vite": "^5.2.11",
+		"vitest": "^1.5.3",
+		"vitest-fetch-mock": "^0.2.2"
+	},
+	"volta": {
+		"node": "20.11.1"
+	}
+}

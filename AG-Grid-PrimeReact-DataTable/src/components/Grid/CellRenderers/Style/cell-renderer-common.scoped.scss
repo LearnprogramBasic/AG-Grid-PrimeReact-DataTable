@@ -1,0 +1,17 @@
+.shared-renderer-styles{
+	padding-top: 10px;
+	display: flex;
+	justify-content: center;
+	background-color: var(--border-200);
+	height: 100%;
+}
+
+.trash-icon-renderer {
+	@extend .shared-renderer-styles;
+	padding-top: 6px;
+  }
+
+  .product-autocomplete-renderer {
+	@extend .shared-renderer-styles;
+	padding: 13px 8px 4px;
+  }

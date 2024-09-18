@@ -1,0 +1,13 @@
+{
+	"dashboard": {
+		"welcome": "Bienvenido a la el micro-frontend react para siigo (Español España)",
+		"links": {
+			"go": "Ir a una vista alterna"
+		}
+	},
+	"componentB": {
+		"links": {
+			"go": "Regresar a la vista principal"
+		}
+	}
+}

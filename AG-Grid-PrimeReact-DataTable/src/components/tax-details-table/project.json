@@ -1,0 +1,39 @@
+{
+	"name": "tax-details-table-react-ui",
+	"$schema": "https://raw.githubusercontent.com/nrwl/nx/master/packages/nx/schemas/project-schema.json",
+	"targets": {
+		"version": {
+			"executor": "@jscutlery/semver:version",
+			"options": {
+				"commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]",
+				"preset": "conventional",
+				"trackDeps": true,
+				"noVerify": true,
+				"allowEmptyRelease": true,
+				"push": true,
+				"postTargets": ["tax-details-table-react-ui:github"]
+			}
+		},
+		"github":{
+			"executor": "@jscutlery/semver:github",
+			"options": {
+				"tag": "${tag}",
+				"notes": "${notes}"
+			}
+		},
+		"publish:root": {
+			"executor": "nx:run-commands",
+			"options": {
+				 "command": "pnpm -F tax-details-table-react-ui publish --no-git-checks"
+			}
+		},
+		"process-results": {
+			"executor": "@siigo-arquitectura/plugin-core:process-results",
+			"options": {
+				"allowBuildOnMissing": true
+			}
+		}
+	},
+	"projectType": "library",
+	"tags": ["actor:shared-ui","type:shared-ui","framework:react","has:e2e","has:unit","destination:feed"]
+}

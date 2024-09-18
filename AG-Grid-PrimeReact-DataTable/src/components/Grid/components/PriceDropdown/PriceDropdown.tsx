@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import './PriceDropdown.scope.scss';
-import { DropdownList } from './DropdownList/DropdownList';
-import { PriceDropdownProps } from '../../typings';
+import { DropdownList } from '@components/Grid/components/PriceDropdown/DropdownList/DropdownList';
+import { PriceDropdownProps } from '@typings/typingsGrid/types';
 
 export const PriceDropdown: FC<PriceDropdownProps> = ({
 	icon,

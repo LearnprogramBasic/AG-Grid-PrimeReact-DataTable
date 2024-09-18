@@ -5,14 +5,19 @@ export const postProcessPopup = (params: PostProcessPopupParams) => {
 		return;
 	}
 
-	const columnId = params.column ? params.column.getId() : undefined;
+	const columnId = params.column?.getId();
 	const ePopup = params.ePopup;
 
-	if (columnId === 'cantidad') {
-		ePopup.style.top = `${parseInt(ePopup.style.top) + 15}px`;
-		ePopup.style.left = `${parseInt(ePopup.style.left) - 270}px`;
-	} else if (columnId === 'descuento') {
-		ePopup.style.top = `${parseInt(ePopup.style.top) + 15}px`;
-		ePopup.style.left = `${parseInt(ePopup.style.left) - 220}px`;
+	// Configuración de desplazamiento por columna
+	const offsetConfig: Record<string, { top: number; left: number }> = {
+		cantidad: { top: 15, left: -270 },
+		descuento: { top: 15, left: -220 },
+	};
+
+	// Aplicar desplazamiento si existe configuración para la columna
+	const offset = offsetConfig[columnId || ''];
+	if (offset) {
+		ePopup.style.top = `${parseInt(ePopup.style.top) + offset.top}px`;
+		ePopup.style.left = `${parseInt(ePopup.style.left) + offset.left}px`;
 	}
 };

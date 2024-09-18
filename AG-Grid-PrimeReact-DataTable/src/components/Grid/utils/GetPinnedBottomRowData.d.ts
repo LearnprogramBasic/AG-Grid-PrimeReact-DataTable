@@ -1,2 +1,2 @@
-import { RowData } from '../MockData/rowData';
+import { RowData } from '@typings/typingsGrid/types';
 export declare const getPinnedBottomRowData: (rowDataLength: number) => RowData[];

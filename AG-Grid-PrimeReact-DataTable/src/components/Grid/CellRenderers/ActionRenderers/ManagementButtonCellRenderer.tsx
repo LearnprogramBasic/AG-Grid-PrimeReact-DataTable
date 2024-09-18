@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { ManagementButtonIconMolecule } from '@siigo-arquitectura/management-button-icon-molecule-react';
-import { ManagementButtonCellRendererProps, ManagementButtonIconMoleculeProps } from '../../typings';
+import { ManagementButtonCellRendererProps, ManagementButtonIconMoleculeProps } from '@typings/typingsGrid/types';
+import '@components/Grid/CellRenderers/Style/cell-renderer-common.scoped.scss';
 
 export const ManagementButtonCellRenderer: FC<
 	ManagementButtonCellRendererProps & ManagementButtonIconMoleculeProps
@@ -17,18 +18,10 @@ export const ManagementButtonCellRenderer: FC<
 }) => {
 	const rowIndex = node?.rowIndex ?? -1; // Obtener el índice de la fila
 
-	const handleClick = () => {
-		if (onClick) {
-			// Si se proporciona una función onClick, úsala
-			onClick();
-		} else {
-			// Acción alternativa (mostrar alerta en este caso)
-			alert(`Action button clicked for row ${rowIndex + 1}`);
-		}
-	};
+	const handleClick = () => onClick?.() ?? alert(`Action button clicked for row ${rowIndex + 1}`);
 
 	return (
-		<div style={{ padding: '7px', backgroundColor: 'var(--border-200)' }}>
+		<div className="shared-renderer-styles">
 			<ManagementButtonIconMolecule
 				typeIcon={typeIcon}
 				modeBadge={modeBadge}

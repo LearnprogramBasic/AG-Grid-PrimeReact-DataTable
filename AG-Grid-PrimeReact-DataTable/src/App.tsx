@@ -3,8 +3,11 @@ import { useState, useEffect, FC } from 'react';
 import PrimeReactDataTable from './components/prime-react/PrimeReactDataTable';
 // import EllipsisLinkBadge from './components/prime-react/components/EllipsisLinkBadge/EllipsisLinkBadge';
 import './styles/global.scss';
-import './index.css';
-import CustomAutoComplete from './components/prime-react/CellRenderers/CustomAutoComplete';
+import AutoCompleteWithTable from './components/AutoCompleteWithTable/AutoCompleteWithTable';
+// import './index.css';
+// import CustomAutoComplete from './components/prime-react/CellRenderers/CustomAutoComplete';
+// import Grid from './components/Grid';
+// import AutoCompleteWithTable from './components/AutoCompleteWithTable/AutoCompleteWithTable';
 // import AutoCompleteWithTable from './components/prime-react/components/AutoCompleteTable/AutoCompleteTable';
 // import ProductAutoComplete from './components/prime-react/components/AutoCompleteTable/AutoCompleteTable';
 // import CustomSplitButton from './components/prime-react/components/SplitButton/SplitButton';
@@ -36,7 +39,8 @@ const App: FC = () => {
       <h1>PrimeReact</h1>
       <PrimeReactDataTable />
       <h1>CustomAutoComplete</h1>
-      <CustomAutoComplete />
+      <AutoCompleteWithTable />
+      {/* <Grid /> */}
 
     </div>
   );

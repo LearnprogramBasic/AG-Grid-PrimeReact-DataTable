@@ -6,3 +6,5 @@ export * from './FormRenderers/GiftCheckboxRenderer';
 export * from './ActionRenderers/ButtonAddRenderer';
 export * from './utils/DefaultRenderer';
 export * from './utils/withPinnedCheck';
+export * from './ActionRenderers/ProductAutocompleteRenderer';
+export * from './Style/cell-renderer-common.scoped.scss';

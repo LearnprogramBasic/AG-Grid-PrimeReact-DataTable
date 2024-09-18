@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { PriceDropdown } from '../../components/PriceDropdown/PriceDropdown';
+import { PriceDropdown } from '@components/Grid/components/PriceDropdown/PriceDropdown';
 import { CustomCellEditorProps } from '@ag-grid-community/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +12,7 @@ export const PriceDropdownRenderer: FC<CustomCellEditorProps> = ({ value, onValu
 	};
 
 	return (
-		<div style={{ height: '100%', alignItems: 'center' }}>
+		<div style={{ padding: '7px', backgroundColor: 'var(--border-200)' }}>
 			<PriceDropdown
 				icon={<FontAwesomeIcon icon={faChevronDown} />}
 				isDropdownVisible={true}
